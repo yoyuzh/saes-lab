@@ -1,0 +1,52 @@
+[
+  {
+    "plaintext": "D728",
+    "key": "4AF5",
+    "ciphertext": "24EC"
+  },
+  {
+    "plaintext": "A749",
+    "key": "2D55",
+    "ciphertext": "C349"
+  },
+  {
+    "plaintext": "0000",
+    "key": "0000",
+    "ciphertext": "071E"
+  },
+  {
+    "plaintext": "FFFF",
+    "key": "FFFF",
+    "ciphertext": "5343"
+  },
+  {
+    "plaintext": "4142",
+    "key": "2D55",
+    "ciphertext": "7B3D"
+  },
+  {
+    "plaintext": "1234",
+    "key": "ABCD",
+    "ciphertext": "AB86"
+  },
+  {
+    "plaintext": "0000",
+    "key": "4AF5",
+    "ciphertext": "52B1"
+  },
+  {
+    "plaintext": "FFFF",
+    "key": "4AF5",
+    "ciphertext": "74DB"
+  },
+  {
+    "plaintext": "6F6F",
+    "key": "4AF5",
+    "ciphertext": "D374"
+  },
+  {
+    "plaintext": "1234",
+    "key": "4AF5",
+    "ciphertext": "F4B1"
+  }
+]

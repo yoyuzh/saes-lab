@@ -1,0 +1,5344 @@
+{
+  "tested_at": "2026-10-26T04:43:12.935321-07:00",
+  "our_repository": "https://github.com/yoyuzh/saes-lab",
+  "our_base_commit": "5768c402ca13bd0158735f7e20044b128f58b796",
+  "our_core_sha256": "aea25565643b2e0b53f03706c7bf643399ebbfffbdf4514d01c8cb328a9f3710",
+  "group_members": [
+    {
+      "name": "游雨哲",
+      "student_id": "20240940"
+    },
+    {
+      "name": "冯羿瑞",
+      "student_id": "20240179"
+    }
+  ],
+  "group_size": 2,
+  "peer_group": "三点水小组",
+  "peer_repository": "https://github.com/wen-yan-chen/pro_2_SAES",
+  "peer_commit": "91771295a319d40ced8e1eb9eabf2279f9d520a4",
+  "peer_core_sha256": "1bd018e6da0f0ecb637a53a07918f026cdcc23e2765b774988ee59238d056031",
+  "environment": {
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7"
+  },
+  "execution_scope": "在本组 macOS 环境运行双方实际算法源码并交换密文；未声称对方成员在其设备上现场操作或签字确认",
+  "random_seed": 20261026,
+  "fixed_cases": 10,
+  "random_cases": 512,
+  "total_cases": 522,
+  "same_ciphertext": 522,
+  "our_decrypt_peer_passed": 522,
+  "peer_decrypt_our_passed": 522,
+  "passed": 522,
+  "failed": 0,
+  "http_fixed_vector_verification": {
+    "rows": [
+      {
+        "plaintext": "D728",
+        "key": "4AF5",
+        "expected": "24EC",
+        "actual": "24EC",
+        "restored": "D728",
+        "passed": true
+      },
+      {
+        "plaintext": "A749",
+        "key": "2D55",
+        "expected": "C349",
+        "actual": "C349",
+        "restored": "A749",
+        "passed": true
+      },
+      {
+        "plaintext": "0000",
+        "key": "0000",
+        "expected": "071E",
+        "actual": "071E",
+        "restored": "0000",
+        "passed": true
+      },
+      {
+        "plaintext": "FFFF",
+        "key": "FFFF",
+        "expected": "5343",
+        "actual": "5343",
+        "restored": "FFFF",
+        "passed": true
+      },
+      {
+        "plaintext": "4142",
+        "key": "2D55",
+        "expected": "7B3D",
+        "actual": "7B3D",
+        "restored": "4142",
+        "passed": true
+      },
+      {
+        "plaintext": "1234",
+        "key": "ABCD",
+        "expected": "AB86",
+        "actual": "AB86",
+        "restored": "1234",
+        "passed": true
+      },
+      {
+        "plaintext": "0000",
+        "key": "4AF5",
+        "expected": "52B1",
+        "actual": "52B1",
+        "restored": "0000",
+        "passed": true
+      },
+      {
+        "plaintext": "FFFF",
+        "key": "4AF5",
+        "expected": "74DB",
+        "actual": "74DB",
+        "restored": "FFFF",
+        "passed": true
+      },
+      {
+        "plaintext": "6F6F",
+        "key": "4AF5",
+        "expected": "D374",
+        "actual": "D374",
+        "restored": "6F6F",
+        "passed": true
+      },
+      {
+        "plaintext": "1234",
+        "key": "4AF5",
+        "expected": "F4B1",
+        "actual": "F4B1",
+        "restored": "1234",
+        "passed": true
+      }
+    ],
+    "passed": 10,
+    "total": 10
+  },
+  "compatibility_note": "本次跨组验证针对原始16-bit分组。对方字符串/CBC默认零填充，本组使用PKCS#7；消息级互通需统一填充约定。",
+  "rows": [
+    {
+      "category": "fixed",
+      "plaintext": "D728",
+      "key": "4AF5",
+      "our_ciphertext": "24EC",
+      "peer_ciphertext": "24EC",
+      "our_decryption_of_peer_ciphertext": "D728",
+      "peer_decryption_of_our_ciphertext": "D728",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "A749",
+      "key": "2D55",
+      "our_ciphertext": "C349",
+      "peer_ciphertext": "C349",
+      "our_decryption_of_peer_ciphertext": "A749",
+      "peer_decryption_of_our_ciphertext": "A749",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "0000",
+      "key": "0000",
+      "our_ciphertext": "071E",
+      "peer_ciphertext": "071E",
+      "our_decryption_of_peer_ciphertext": "0000",
+      "peer_decryption_of_our_ciphertext": "0000",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "FFFF",
+      "key": "FFFF",
+      "our_ciphertext": "5343",
+      "peer_ciphertext": "5343",
+      "our_decryption_of_peer_ciphertext": "FFFF",
+      "peer_decryption_of_our_ciphertext": "FFFF",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "4142",
+      "key": "2D55",
+      "our_ciphertext": "7B3D",
+      "peer_ciphertext": "7B3D",
+      "our_decryption_of_peer_ciphertext": "4142",
+      "peer_decryption_of_our_ciphertext": "4142",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "1234",
+      "key": "ABCD",
+      "our_ciphertext": "AB86",
+      "peer_ciphertext": "AB86",
+      "our_decryption_of_peer_ciphertext": "1234",
+      "peer_decryption_of_our_ciphertext": "1234",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "0000",
+      "key": "4AF5",
+      "our_ciphertext": "52B1",
+      "peer_ciphertext": "52B1",
+      "our_decryption_of_peer_ciphertext": "0000",
+      "peer_decryption_of_our_ciphertext": "0000",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "FFFF",
+      "key": "4AF5",
+      "our_ciphertext": "74DB",
+      "peer_ciphertext": "74DB",
+      "our_decryption_of_peer_ciphertext": "FFFF",
+      "peer_decryption_of_our_ciphertext": "FFFF",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "6F6F",
+      "key": "4AF5",
+      "our_ciphertext": "D374",
+      "peer_ciphertext": "D374",
+      "our_decryption_of_peer_ciphertext": "6F6F",
+      "peer_decryption_of_our_ciphertext": "6F6F",
+      "passed": true
+    },
+    {
+      "category": "fixed",
+      "plaintext": "1234",
+      "key": "4AF5",
+      "our_ciphertext": "F4B1",
+      "peer_ciphertext": "F4B1",
+      "our_decryption_of_peer_ciphertext": "1234",
+      "peer_decryption_of_our_ciphertext": "1234",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3A19",
+      "key": "748A",
+      "our_ciphertext": "C019",
+      "peer_ciphertext": "C019",
+      "our_decryption_of_peer_ciphertext": "3A19",
+      "peer_decryption_of_our_ciphertext": "3A19",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4417",
+      "key": "F8DB",
+      "our_ciphertext": "3991",
+      "peer_ciphertext": "3991",
+      "our_decryption_of_peer_ciphertext": "4417",
+      "peer_decryption_of_our_ciphertext": "4417",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CF16",
+      "key": "2DDF",
+      "our_ciphertext": "2180",
+      "peer_ciphertext": "2180",
+      "our_decryption_of_peer_ciphertext": "CF16",
+      "peer_decryption_of_our_ciphertext": "CF16",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0471",
+      "key": "CD14",
+      "our_ciphertext": "0DAC",
+      "peer_ciphertext": "0DAC",
+      "our_decryption_of_peer_ciphertext": "0471",
+      "peer_decryption_of_our_ciphertext": "0471",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B596",
+      "key": "A918",
+      "our_ciphertext": "46BD",
+      "peer_ciphertext": "46BD",
+      "our_decryption_of_peer_ciphertext": "B596",
+      "peer_decryption_of_our_ciphertext": "B596",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AEE1",
+      "key": "6265",
+      "our_ciphertext": "1E2D",
+      "peer_ciphertext": "1E2D",
+      "our_decryption_of_peer_ciphertext": "AEE1",
+      "peer_decryption_of_our_ciphertext": "AEE1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8AC6",
+      "key": "FF08",
+      "our_ciphertext": "32E3",
+      "peer_ciphertext": "32E3",
+      "our_decryption_of_peer_ciphertext": "8AC6",
+      "peer_decryption_of_our_ciphertext": "8AC6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AEE8",
+      "key": "BEAF",
+      "our_ciphertext": "6396",
+      "peer_ciphertext": "6396",
+      "our_decryption_of_peer_ciphertext": "AEE8",
+      "peer_decryption_of_our_ciphertext": "AEE8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1B15",
+      "key": "6FFE",
+      "our_ciphertext": "CDDD",
+      "peer_ciphertext": "CDDD",
+      "our_decryption_of_peer_ciphertext": "1B15",
+      "peer_decryption_of_our_ciphertext": "1B15",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BF33",
+      "key": "FE20",
+      "our_ciphertext": "23F3",
+      "peer_ciphertext": "23F3",
+      "our_decryption_of_peer_ciphertext": "BF33",
+      "peer_decryption_of_our_ciphertext": "BF33",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "69E9",
+      "key": "FE18",
+      "our_ciphertext": "1519",
+      "peer_ciphertext": "1519",
+      "our_decryption_of_peer_ciphertext": "69E9",
+      "peer_decryption_of_our_ciphertext": "69E9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4217",
+      "key": "C674",
+      "our_ciphertext": "E040",
+      "peer_ciphertext": "E040",
+      "our_decryption_of_peer_ciphertext": "4217",
+      "peer_decryption_of_our_ciphertext": "4217",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D175",
+      "key": "9DA5",
+      "our_ciphertext": "2FB4",
+      "peer_ciphertext": "2FB4",
+      "our_decryption_of_peer_ciphertext": "D175",
+      "peer_decryption_of_our_ciphertext": "D175",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6F77",
+      "key": "C8A3",
+      "our_ciphertext": "0263",
+      "peer_ciphertext": "0263",
+      "our_decryption_of_peer_ciphertext": "6F77",
+      "peer_decryption_of_our_ciphertext": "6F77",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DD23",
+      "key": "A528",
+      "our_ciphertext": "CC93",
+      "peer_ciphertext": "CC93",
+      "our_decryption_of_peer_ciphertext": "DD23",
+      "peer_decryption_of_our_ciphertext": "DD23",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "91D6",
+      "key": "23D8",
+      "our_ciphertext": "6773",
+      "peer_ciphertext": "6773",
+      "our_decryption_of_peer_ciphertext": "91D6",
+      "peer_decryption_of_our_ciphertext": "91D6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AD34",
+      "key": "BF0F",
+      "our_ciphertext": "995A",
+      "peer_ciphertext": "995A",
+      "our_decryption_of_peer_ciphertext": "AD34",
+      "peer_decryption_of_our_ciphertext": "AD34",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4BF2",
+      "key": "D884",
+      "our_ciphertext": "7FC2",
+      "peer_ciphertext": "7FC2",
+      "our_decryption_of_peer_ciphertext": "4BF2",
+      "peer_decryption_of_our_ciphertext": "4BF2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A486",
+      "key": "9D41",
+      "our_ciphertext": "0C22",
+      "peer_ciphertext": "0C22",
+      "our_decryption_of_peer_ciphertext": "A486",
+      "peer_decryption_of_our_ciphertext": "A486",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F4A8",
+      "key": "BCAD",
+      "our_ciphertext": "78C4",
+      "peer_ciphertext": "78C4",
+      "our_decryption_of_peer_ciphertext": "F4A8",
+      "peer_decryption_of_our_ciphertext": "F4A8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EF63",
+      "key": "AD14",
+      "our_ciphertext": "3FD5",
+      "peer_ciphertext": "3FD5",
+      "our_decryption_of_peer_ciphertext": "EF63",
+      "peer_decryption_of_our_ciphertext": "EF63",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6567",
+      "key": "1CD1",
+      "our_ciphertext": "A566",
+      "peer_ciphertext": "A566",
+      "our_decryption_of_peer_ciphertext": "6567",
+      "peer_decryption_of_our_ciphertext": "6567",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4E39",
+      "key": "68BD",
+      "our_ciphertext": "8938",
+      "peer_ciphertext": "8938",
+      "our_decryption_of_peer_ciphertext": "4E39",
+      "peer_decryption_of_our_ciphertext": "4E39",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4FB6",
+      "key": "72A6",
+      "our_ciphertext": "6E9C",
+      "peer_ciphertext": "6E9C",
+      "our_decryption_of_peer_ciphertext": "4FB6",
+      "peer_decryption_of_our_ciphertext": "4FB6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F3BB",
+      "key": "7AC0",
+      "our_ciphertext": "1D2F",
+      "peer_ciphertext": "1D2F",
+      "our_decryption_of_peer_ciphertext": "F3BB",
+      "peer_decryption_of_our_ciphertext": "F3BB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1F1C",
+      "key": "D9AD",
+      "our_ciphertext": "849F",
+      "peer_ciphertext": "849F",
+      "our_decryption_of_peer_ciphertext": "1F1C",
+      "peer_decryption_of_our_ciphertext": "1F1C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C942",
+      "key": "3960",
+      "our_ciphertext": "64D0",
+      "peer_ciphertext": "64D0",
+      "our_decryption_of_peer_ciphertext": "C942",
+      "peer_decryption_of_our_ciphertext": "C942",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CA18",
+      "key": "9E92",
+      "our_ciphertext": "704E",
+      "peer_ciphertext": "704E",
+      "our_decryption_of_peer_ciphertext": "CA18",
+      "peer_decryption_of_our_ciphertext": "CA18",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "057C",
+      "key": "7272",
+      "our_ciphertext": "579F",
+      "peer_ciphertext": "579F",
+      "our_decryption_of_peer_ciphertext": "057C",
+      "peer_decryption_of_our_ciphertext": "057C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2340",
+      "key": "E7BC",
+      "our_ciphertext": "40B6",
+      "peer_ciphertext": "40B6",
+      "our_decryption_of_peer_ciphertext": "2340",
+      "peer_decryption_of_our_ciphertext": "2340",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4154",
+      "key": "C829",
+      "our_ciphertext": "8001",
+      "peer_ciphertext": "8001",
+      "our_decryption_of_peer_ciphertext": "4154",
+      "peer_decryption_of_our_ciphertext": "4154",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5421",
+      "key": "1C69",
+      "our_ciphertext": "8A8C",
+      "peer_ciphertext": "8A8C",
+      "our_decryption_of_peer_ciphertext": "5421",
+      "peer_decryption_of_our_ciphertext": "5421",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8EFD",
+      "key": "8C4D",
+      "our_ciphertext": "01ED",
+      "peer_ciphertext": "01ED",
+      "our_decryption_of_peer_ciphertext": "8EFD",
+      "peer_decryption_of_our_ciphertext": "8EFD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "33B8",
+      "key": "B612",
+      "our_ciphertext": "4076",
+      "peer_ciphertext": "4076",
+      "our_decryption_of_peer_ciphertext": "33B8",
+      "peer_decryption_of_our_ciphertext": "33B8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "30C5",
+      "key": "8140",
+      "our_ciphertext": "99DA",
+      "peer_ciphertext": "99DA",
+      "our_decryption_of_peer_ciphertext": "30C5",
+      "peer_decryption_of_our_ciphertext": "30C5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "96B4",
+      "key": "EC5B",
+      "our_ciphertext": "939C",
+      "peer_ciphertext": "939C",
+      "our_decryption_of_peer_ciphertext": "96B4",
+      "peer_decryption_of_our_ciphertext": "96B4",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2995",
+      "key": "D3DE",
+      "our_ciphertext": "625F",
+      "peer_ciphertext": "625F",
+      "our_decryption_of_peer_ciphertext": "2995",
+      "peer_decryption_of_our_ciphertext": "2995",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "28EE",
+      "key": "97A7",
+      "our_ciphertext": "90CA",
+      "peer_ciphertext": "90CA",
+      "our_decryption_of_peer_ciphertext": "28EE",
+      "peer_decryption_of_our_ciphertext": "28EE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0545",
+      "key": "9A5B",
+      "our_ciphertext": "A332",
+      "peer_ciphertext": "A332",
+      "our_decryption_of_peer_ciphertext": "0545",
+      "peer_decryption_of_our_ciphertext": "0545",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A0FA",
+      "key": "2978",
+      "our_ciphertext": "F185",
+      "peer_ciphertext": "F185",
+      "our_decryption_of_peer_ciphertext": "A0FA",
+      "peer_decryption_of_our_ciphertext": "A0FA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "88BC",
+      "key": "18D5",
+      "our_ciphertext": "AB28",
+      "peer_ciphertext": "AB28",
+      "our_decryption_of_peer_ciphertext": "88BC",
+      "peer_decryption_of_our_ciphertext": "88BC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0610",
+      "key": "1D7C",
+      "our_ciphertext": "6613",
+      "peer_ciphertext": "6613",
+      "our_decryption_of_peer_ciphertext": "0610",
+      "peer_decryption_of_our_ciphertext": "0610",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3865",
+      "key": "B453",
+      "our_ciphertext": "5255",
+      "peer_ciphertext": "5255",
+      "our_decryption_of_peer_ciphertext": "3865",
+      "peer_decryption_of_our_ciphertext": "3865",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5E96",
+      "key": "E524",
+      "our_ciphertext": "30A4",
+      "peer_ciphertext": "30A4",
+      "our_decryption_of_peer_ciphertext": "5E96",
+      "peer_decryption_of_our_ciphertext": "5E96",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B471",
+      "key": "C82D",
+      "our_ciphertext": "E1A9",
+      "peer_ciphertext": "E1A9",
+      "our_decryption_of_peer_ciphertext": "B471",
+      "peer_decryption_of_our_ciphertext": "B471",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FC65",
+      "key": "120A",
+      "our_ciphertext": "CF19",
+      "peer_ciphertext": "CF19",
+      "our_decryption_of_peer_ciphertext": "FC65",
+      "peer_decryption_of_our_ciphertext": "FC65",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6EAD",
+      "key": "2A95",
+      "our_ciphertext": "8228",
+      "peer_ciphertext": "8228",
+      "our_decryption_of_peer_ciphertext": "6EAD",
+      "peer_decryption_of_our_ciphertext": "6EAD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E369",
+      "key": "9274",
+      "our_ciphertext": "9938",
+      "peer_ciphertext": "9938",
+      "our_decryption_of_peer_ciphertext": "E369",
+      "peer_decryption_of_our_ciphertext": "E369",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A1AD",
+      "key": "FB27",
+      "our_ciphertext": "261F",
+      "peer_ciphertext": "261F",
+      "our_decryption_of_peer_ciphertext": "A1AD",
+      "peer_decryption_of_our_ciphertext": "A1AD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DF1B",
+      "key": "5896",
+      "our_ciphertext": "5C8D",
+      "peer_ciphertext": "5C8D",
+      "our_decryption_of_peer_ciphertext": "DF1B",
+      "peer_decryption_of_our_ciphertext": "DF1B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B9DD",
+      "key": "9AA7",
+      "our_ciphertext": "6135",
+      "peer_ciphertext": "6135",
+      "our_decryption_of_peer_ciphertext": "B9DD",
+      "peer_decryption_of_our_ciphertext": "B9DD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C3E1",
+      "key": "E6F7",
+      "our_ciphertext": "F08E",
+      "peer_ciphertext": "F08E",
+      "our_decryption_of_peer_ciphertext": "C3E1",
+      "peer_decryption_of_our_ciphertext": "C3E1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DBFA",
+      "key": "D9AC",
+      "our_ciphertext": "314C",
+      "peer_ciphertext": "314C",
+      "our_decryption_of_peer_ciphertext": "DBFA",
+      "peer_decryption_of_our_ciphertext": "DBFA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E732",
+      "key": "283D",
+      "our_ciphertext": "D5BC",
+      "peer_ciphertext": "D5BC",
+      "our_decryption_of_peer_ciphertext": "E732",
+      "peer_decryption_of_our_ciphertext": "E732",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "441D",
+      "key": "A2DB",
+      "our_ciphertext": "1039",
+      "peer_ciphertext": "1039",
+      "our_decryption_of_peer_ciphertext": "441D",
+      "peer_decryption_of_our_ciphertext": "441D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AA9F",
+      "key": "27D0",
+      "our_ciphertext": "2E3E",
+      "peer_ciphertext": "2E3E",
+      "our_decryption_of_peer_ciphertext": "AA9F",
+      "peer_decryption_of_our_ciphertext": "AA9F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "12FE",
+      "key": "F4EA",
+      "our_ciphertext": "29AF",
+      "peer_ciphertext": "29AF",
+      "our_decryption_of_peer_ciphertext": "12FE",
+      "peer_decryption_of_our_ciphertext": "12FE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BDFD",
+      "key": "B766",
+      "our_ciphertext": "5507",
+      "peer_ciphertext": "5507",
+      "our_decryption_of_peer_ciphertext": "BDFD",
+      "peer_decryption_of_our_ciphertext": "BDFD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6282",
+      "key": "9CC4",
+      "our_ciphertext": "C9F8",
+      "peer_ciphertext": "C9F8",
+      "our_decryption_of_peer_ciphertext": "6282",
+      "peer_decryption_of_our_ciphertext": "6282",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9AB6",
+      "key": "8639",
+      "our_ciphertext": "E27F",
+      "peer_ciphertext": "E27F",
+      "our_decryption_of_peer_ciphertext": "9AB6",
+      "peer_decryption_of_our_ciphertext": "9AB6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "988B",
+      "key": "5157",
+      "our_ciphertext": "A80B",
+      "peer_ciphertext": "A80B",
+      "our_decryption_of_peer_ciphertext": "988B",
+      "peer_decryption_of_our_ciphertext": "988B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B5B3",
+      "key": "AFE0",
+      "our_ciphertext": "0C97",
+      "peer_ciphertext": "0C97",
+      "our_decryption_of_peer_ciphertext": "B5B3",
+      "peer_decryption_of_our_ciphertext": "B5B3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C88F",
+      "key": "D28B",
+      "our_ciphertext": "9594",
+      "peer_ciphertext": "9594",
+      "our_decryption_of_peer_ciphertext": "C88F",
+      "peer_decryption_of_our_ciphertext": "C88F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EB98",
+      "key": "63F4",
+      "our_ciphertext": "0123",
+      "peer_ciphertext": "0123",
+      "our_decryption_of_peer_ciphertext": "EB98",
+      "peer_decryption_of_our_ciphertext": "EB98",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BB51",
+      "key": "D85E",
+      "our_ciphertext": "21FF",
+      "peer_ciphertext": "21FF",
+      "our_decryption_of_peer_ciphertext": "BB51",
+      "peer_decryption_of_our_ciphertext": "BB51",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A483",
+      "key": "4AAD",
+      "our_ciphertext": "94F7",
+      "peer_ciphertext": "94F7",
+      "our_decryption_of_peer_ciphertext": "A483",
+      "peer_decryption_of_our_ciphertext": "A483",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "99FF",
+      "key": "EA34",
+      "our_ciphertext": "34E3",
+      "peer_ciphertext": "34E3",
+      "our_decryption_of_peer_ciphertext": "99FF",
+      "peer_decryption_of_our_ciphertext": "99FF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2B60",
+      "key": "6D56",
+      "our_ciphertext": "B19C",
+      "peer_ciphertext": "B19C",
+      "our_decryption_of_peer_ciphertext": "2B60",
+      "peer_decryption_of_our_ciphertext": "2B60",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C4AB",
+      "key": "B068",
+      "our_ciphertext": "F53E",
+      "peer_ciphertext": "F53E",
+      "our_decryption_of_peer_ciphertext": "C4AB",
+      "peer_decryption_of_our_ciphertext": "C4AB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D60F",
+      "key": "485C",
+      "our_ciphertext": "479D",
+      "peer_ciphertext": "479D",
+      "our_decryption_of_peer_ciphertext": "D60F",
+      "peer_decryption_of_our_ciphertext": "D60F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E9B2",
+      "key": "81D8",
+      "our_ciphertext": "F9D9",
+      "peer_ciphertext": "F9D9",
+      "our_decryption_of_peer_ciphertext": "E9B2",
+      "peer_decryption_of_our_ciphertext": "E9B2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E648",
+      "key": "BA4C",
+      "our_ciphertext": "8510",
+      "peer_ciphertext": "8510",
+      "our_decryption_of_peer_ciphertext": "E648",
+      "peer_decryption_of_our_ciphertext": "E648",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6367",
+      "key": "D34E",
+      "our_ciphertext": "4468",
+      "peer_ciphertext": "4468",
+      "our_decryption_of_peer_ciphertext": "6367",
+      "peer_decryption_of_our_ciphertext": "6367",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7008",
+      "key": "6383",
+      "our_ciphertext": "037C",
+      "peer_ciphertext": "037C",
+      "our_decryption_of_peer_ciphertext": "7008",
+      "peer_decryption_of_our_ciphertext": "7008",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "50E9",
+      "key": "8E28",
+      "our_ciphertext": "A19B",
+      "peer_ciphertext": "A19B",
+      "our_decryption_of_peer_ciphertext": "50E9",
+      "peer_decryption_of_our_ciphertext": "50E9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B6F1",
+      "key": "4141",
+      "our_ciphertext": "BDFD",
+      "peer_ciphertext": "BDFD",
+      "our_decryption_of_peer_ciphertext": "B6F1",
+      "peer_decryption_of_our_ciphertext": "B6F1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "437C",
+      "key": "ADD9",
+      "our_ciphertext": "0C34",
+      "peer_ciphertext": "0C34",
+      "our_decryption_of_peer_ciphertext": "437C",
+      "peer_decryption_of_our_ciphertext": "437C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D07E",
+      "key": "F66F",
+      "our_ciphertext": "56CA",
+      "peer_ciphertext": "56CA",
+      "our_decryption_of_peer_ciphertext": "D07E",
+      "peer_decryption_of_our_ciphertext": "D07E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "97AD",
+      "key": "D0DD",
+      "our_ciphertext": "E28D",
+      "peer_ciphertext": "E28D",
+      "our_decryption_of_peer_ciphertext": "97AD",
+      "peer_decryption_of_our_ciphertext": "97AD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3219",
+      "key": "2EFF",
+      "our_ciphertext": "182F",
+      "peer_ciphertext": "182F",
+      "our_decryption_of_peer_ciphertext": "3219",
+      "peer_decryption_of_our_ciphertext": "3219",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "990D",
+      "key": "392F",
+      "our_ciphertext": "9F52",
+      "peer_ciphertext": "9F52",
+      "our_decryption_of_peer_ciphertext": "990D",
+      "peer_decryption_of_our_ciphertext": "990D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F053",
+      "key": "E6E7",
+      "our_ciphertext": "774C",
+      "peer_ciphertext": "774C",
+      "our_decryption_of_peer_ciphertext": "F053",
+      "peer_decryption_of_our_ciphertext": "F053",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "44C0",
+      "key": "5A5D",
+      "our_ciphertext": "870D",
+      "peer_ciphertext": "870D",
+      "our_decryption_of_peer_ciphertext": "44C0",
+      "peer_decryption_of_our_ciphertext": "44C0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D288",
+      "key": "09FB",
+      "our_ciphertext": "E730",
+      "peer_ciphertext": "E730",
+      "our_decryption_of_peer_ciphertext": "D288",
+      "peer_decryption_of_our_ciphertext": "D288",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3A20",
+      "key": "1CB8",
+      "our_ciphertext": "6740",
+      "peer_ciphertext": "6740",
+      "our_decryption_of_peer_ciphertext": "3A20",
+      "peer_decryption_of_our_ciphertext": "3A20",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4B22",
+      "key": "EFDC",
+      "our_ciphertext": "C346",
+      "peer_ciphertext": "C346",
+      "our_decryption_of_peer_ciphertext": "4B22",
+      "peer_decryption_of_our_ciphertext": "4B22",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "723B",
+      "key": "AD3D",
+      "our_ciphertext": "1E11",
+      "peer_ciphertext": "1E11",
+      "our_decryption_of_peer_ciphertext": "723B",
+      "peer_decryption_of_our_ciphertext": "723B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "00FF",
+      "key": "6C6A",
+      "our_ciphertext": "82D7",
+      "peer_ciphertext": "82D7",
+      "our_decryption_of_peer_ciphertext": "00FF",
+      "peer_decryption_of_our_ciphertext": "00FF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AAAA",
+      "key": "9388",
+      "our_ciphertext": "06BE",
+      "peer_ciphertext": "06BE",
+      "our_decryption_of_peer_ciphertext": "AAAA",
+      "peer_decryption_of_our_ciphertext": "AAAA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "478F",
+      "key": "0800",
+      "our_ciphertext": "DB11",
+      "peer_ciphertext": "DB11",
+      "our_decryption_of_peer_ciphertext": "478F",
+      "peer_decryption_of_our_ciphertext": "478F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1DC2",
+      "key": "7FB6",
+      "our_ciphertext": "B5DF",
+      "peer_ciphertext": "B5DF",
+      "our_decryption_of_peer_ciphertext": "1DC2",
+      "peer_decryption_of_our_ciphertext": "1DC2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6F29",
+      "key": "1644",
+      "our_ciphertext": "C197",
+      "peer_ciphertext": "C197",
+      "our_decryption_of_peer_ciphertext": "6F29",
+      "peer_decryption_of_our_ciphertext": "6F29",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2198",
+      "key": "A99E",
+      "our_ciphertext": "1235",
+      "peer_ciphertext": "1235",
+      "our_decryption_of_peer_ciphertext": "2198",
+      "peer_decryption_of_our_ciphertext": "2198",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E729",
+      "key": "4EC7",
+      "our_ciphertext": "2C48",
+      "peer_ciphertext": "2C48",
+      "our_decryption_of_peer_ciphertext": "E729",
+      "peer_decryption_of_our_ciphertext": "E729",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "25A5",
+      "key": "2748",
+      "our_ciphertext": "38F6",
+      "peer_ciphertext": "38F6",
+      "our_decryption_of_peer_ciphertext": "25A5",
+      "peer_decryption_of_our_ciphertext": "25A5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DA9A",
+      "key": "D613",
+      "our_ciphertext": "EDAE",
+      "peer_ciphertext": "EDAE",
+      "our_decryption_of_peer_ciphertext": "DA9A",
+      "peer_decryption_of_our_ciphertext": "DA9A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B29A",
+      "key": "F79E",
+      "our_ciphertext": "5758",
+      "peer_ciphertext": "5758",
+      "our_decryption_of_peer_ciphertext": "B29A",
+      "peer_decryption_of_our_ciphertext": "B29A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C35D",
+      "key": "249C",
+      "our_ciphertext": "5178",
+      "peer_ciphertext": "5178",
+      "our_decryption_of_peer_ciphertext": "C35D",
+      "peer_decryption_of_our_ciphertext": "C35D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AA52",
+      "key": "FCFE",
+      "our_ciphertext": "6090",
+      "peer_ciphertext": "6090",
+      "our_decryption_of_peer_ciphertext": "AA52",
+      "peer_decryption_of_our_ciphertext": "AA52",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7FBB",
+      "key": "F85D",
+      "our_ciphertext": "5361",
+      "peer_ciphertext": "5361",
+      "our_decryption_of_peer_ciphertext": "7FBB",
+      "peer_decryption_of_our_ciphertext": "7FBB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C5CD",
+      "key": "C0DC",
+      "our_ciphertext": "B65B",
+      "peer_ciphertext": "B65B",
+      "our_decryption_of_peer_ciphertext": "C5CD",
+      "peer_decryption_of_our_ciphertext": "C5CD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E654",
+      "key": "2904",
+      "our_ciphertext": "B0CD",
+      "peer_ciphertext": "B0CD",
+      "our_decryption_of_peer_ciphertext": "E654",
+      "peer_decryption_of_our_ciphertext": "E654",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5DEE",
+      "key": "0127",
+      "our_ciphertext": "FD5E",
+      "peer_ciphertext": "FD5E",
+      "our_decryption_of_peer_ciphertext": "5DEE",
+      "peer_decryption_of_our_ciphertext": "5DEE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6F36",
+      "key": "349F",
+      "our_ciphertext": "C7A7",
+      "peer_ciphertext": "C7A7",
+      "our_decryption_of_peer_ciphertext": "6F36",
+      "peer_decryption_of_our_ciphertext": "6F36",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0F89",
+      "key": "344D",
+      "our_ciphertext": "C7E6",
+      "peer_ciphertext": "C7E6",
+      "our_decryption_of_peer_ciphertext": "0F89",
+      "peer_decryption_of_our_ciphertext": "0F89",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A539",
+      "key": "052D",
+      "our_ciphertext": "A41A",
+      "peer_ciphertext": "A41A",
+      "our_decryption_of_peer_ciphertext": "A539",
+      "peer_decryption_of_our_ciphertext": "A539",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1F49",
+      "key": "4AA6",
+      "our_ciphertext": "B84B",
+      "peer_ciphertext": "B84B",
+      "our_decryption_of_peer_ciphertext": "1F49",
+      "peer_decryption_of_our_ciphertext": "1F49",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DFC7",
+      "key": "7C24",
+      "our_ciphertext": "D6A3",
+      "peer_ciphertext": "D6A3",
+      "our_decryption_of_peer_ciphertext": "DFC7",
+      "peer_decryption_of_our_ciphertext": "DFC7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C847",
+      "key": "0E9A",
+      "our_ciphertext": "130B",
+      "peer_ciphertext": "130B",
+      "our_decryption_of_peer_ciphertext": "C847",
+      "peer_decryption_of_our_ciphertext": "C847",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4C50",
+      "key": "B04D",
+      "our_ciphertext": "2883",
+      "peer_ciphertext": "2883",
+      "our_decryption_of_peer_ciphertext": "4C50",
+      "peer_decryption_of_our_ciphertext": "4C50",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8823",
+      "key": "F082",
+      "our_ciphertext": "0D92",
+      "peer_ciphertext": "0D92",
+      "our_decryption_of_peer_ciphertext": "8823",
+      "peer_decryption_of_our_ciphertext": "8823",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "348E",
+      "key": "E4A2",
+      "our_ciphertext": "28EB",
+      "peer_ciphertext": "28EB",
+      "our_decryption_of_peer_ciphertext": "348E",
+      "peer_decryption_of_our_ciphertext": "348E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A75D",
+      "key": "7AFD",
+      "our_ciphertext": "5DE0",
+      "peer_ciphertext": "5DE0",
+      "our_decryption_of_peer_ciphertext": "A75D",
+      "peer_decryption_of_our_ciphertext": "A75D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E056",
+      "key": "8C9C",
+      "our_ciphertext": "8CCB",
+      "peer_ciphertext": "8CCB",
+      "our_decryption_of_peer_ciphertext": "E056",
+      "peer_decryption_of_our_ciphertext": "E056",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "34F8",
+      "key": "7EFC",
+      "our_ciphertext": "60C1",
+      "peer_ciphertext": "60C1",
+      "our_decryption_of_peer_ciphertext": "34F8",
+      "peer_decryption_of_our_ciphertext": "34F8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C0D3",
+      "key": "AB23",
+      "our_ciphertext": "BD2F",
+      "peer_ciphertext": "BD2F",
+      "our_decryption_of_peer_ciphertext": "C0D3",
+      "peer_decryption_of_our_ciphertext": "C0D3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F429",
+      "key": "50C1",
+      "our_ciphertext": "EF20",
+      "peer_ciphertext": "EF20",
+      "our_decryption_of_peer_ciphertext": "F429",
+      "peer_decryption_of_our_ciphertext": "F429",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C5E8",
+      "key": "F5BA",
+      "our_ciphertext": "2E3E",
+      "peer_ciphertext": "2E3E",
+      "our_decryption_of_peer_ciphertext": "C5E8",
+      "peer_decryption_of_our_ciphertext": "C5E8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6306",
+      "key": "5C51",
+      "our_ciphertext": "7607",
+      "peer_ciphertext": "7607",
+      "our_decryption_of_peer_ciphertext": "6306",
+      "peer_decryption_of_our_ciphertext": "6306",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "20F7",
+      "key": "6075",
+      "our_ciphertext": "991C",
+      "peer_ciphertext": "991C",
+      "our_decryption_of_peer_ciphertext": "20F7",
+      "peer_decryption_of_our_ciphertext": "20F7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E30B",
+      "key": "7A6B",
+      "our_ciphertext": "1C70",
+      "peer_ciphertext": "1C70",
+      "our_decryption_of_peer_ciphertext": "E30B",
+      "peer_decryption_of_our_ciphertext": "E30B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "63D3",
+      "key": "870D",
+      "our_ciphertext": "0AC4",
+      "peer_ciphertext": "0AC4",
+      "our_decryption_of_peer_ciphertext": "63D3",
+      "peer_decryption_of_our_ciphertext": "63D3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2D1F",
+      "key": "A51E",
+      "our_ciphertext": "FEAD",
+      "peer_ciphertext": "FEAD",
+      "our_decryption_of_peer_ciphertext": "2D1F",
+      "peer_decryption_of_our_ciphertext": "2D1F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DB73",
+      "key": "A0FF",
+      "our_ciphertext": "1E33",
+      "peer_ciphertext": "1E33",
+      "our_decryption_of_peer_ciphertext": "DB73",
+      "peer_decryption_of_our_ciphertext": "DB73",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8FEB",
+      "key": "6CE9",
+      "our_ciphertext": "129A",
+      "peer_ciphertext": "129A",
+      "our_decryption_of_peer_ciphertext": "8FEB",
+      "peer_decryption_of_our_ciphertext": "8FEB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4917",
+      "key": "8DE5",
+      "our_ciphertext": "C4AC",
+      "peer_ciphertext": "C4AC",
+      "our_decryption_of_peer_ciphertext": "4917",
+      "peer_decryption_of_our_ciphertext": "4917",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "592C",
+      "key": "0458",
+      "our_ciphertext": "CB37",
+      "peer_ciphertext": "CB37",
+      "our_decryption_of_peer_ciphertext": "592C",
+      "peer_decryption_of_our_ciphertext": "592C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "12CE",
+      "key": "B810",
+      "our_ciphertext": "EBF8",
+      "peer_ciphertext": "EBF8",
+      "our_decryption_of_peer_ciphertext": "12CE",
+      "peer_decryption_of_our_ciphertext": "12CE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EC67",
+      "key": "08A4",
+      "our_ciphertext": "32F3",
+      "peer_ciphertext": "32F3",
+      "our_decryption_of_peer_ciphertext": "EC67",
+      "peer_decryption_of_our_ciphertext": "EC67",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "42EA",
+      "key": "F7ED",
+      "our_ciphertext": "55CC",
+      "peer_ciphertext": "55CC",
+      "our_decryption_of_peer_ciphertext": "42EA",
+      "peer_decryption_of_our_ciphertext": "42EA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D26E",
+      "key": "4EC9",
+      "our_ciphertext": "DD94",
+      "peer_ciphertext": "DD94",
+      "our_decryption_of_peer_ciphertext": "D26E",
+      "peer_decryption_of_our_ciphertext": "D26E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E4BD",
+      "key": "5A26",
+      "our_ciphertext": "E154",
+      "peer_ciphertext": "E154",
+      "our_decryption_of_peer_ciphertext": "E4BD",
+      "peer_decryption_of_our_ciphertext": "E4BD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6627",
+      "key": "7964",
+      "our_ciphertext": "C7CB",
+      "peer_ciphertext": "C7CB",
+      "our_decryption_of_peer_ciphertext": "6627",
+      "peer_decryption_of_our_ciphertext": "6627",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C2E7",
+      "key": "D2CA",
+      "our_ciphertext": "7763",
+      "peer_ciphertext": "7763",
+      "our_decryption_of_peer_ciphertext": "C2E7",
+      "peer_decryption_of_our_ciphertext": "C2E7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3DFC",
+      "key": "FEE6",
+      "our_ciphertext": "22FF",
+      "peer_ciphertext": "22FF",
+      "our_decryption_of_peer_ciphertext": "3DFC",
+      "peer_decryption_of_our_ciphertext": "3DFC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "12E3",
+      "key": "B119",
+      "our_ciphertext": "AA01",
+      "peer_ciphertext": "AA01",
+      "our_decryption_of_peer_ciphertext": "12E3",
+      "peer_decryption_of_our_ciphertext": "12E3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F7D6",
+      "key": "EBA3",
+      "our_ciphertext": "65A4",
+      "peer_ciphertext": "65A4",
+      "our_decryption_of_peer_ciphertext": "F7D6",
+      "peer_decryption_of_our_ciphertext": "F7D6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3070",
+      "key": "35ED",
+      "our_ciphertext": "7666",
+      "peer_ciphertext": "7666",
+      "our_decryption_of_peer_ciphertext": "3070",
+      "peer_decryption_of_our_ciphertext": "3070",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B7F5",
+      "key": "E240",
+      "our_ciphertext": "B6C3",
+      "peer_ciphertext": "B6C3",
+      "our_decryption_of_peer_ciphertext": "B7F5",
+      "peer_decryption_of_our_ciphertext": "B7F5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "55A1",
+      "key": "DE8D",
+      "our_ciphertext": "F5B1",
+      "peer_ciphertext": "F5B1",
+      "our_decryption_of_peer_ciphertext": "55A1",
+      "peer_decryption_of_our_ciphertext": "55A1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B57F",
+      "key": "570A",
+      "our_ciphertext": "B26C",
+      "peer_ciphertext": "B26C",
+      "our_decryption_of_peer_ciphertext": "B57F",
+      "peer_decryption_of_our_ciphertext": "B57F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "18A1",
+      "key": "361F",
+      "our_ciphertext": "639A",
+      "peer_ciphertext": "639A",
+      "our_decryption_of_peer_ciphertext": "18A1",
+      "peer_decryption_of_our_ciphertext": "18A1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0FCB",
+      "key": "DC66",
+      "our_ciphertext": "B5B0",
+      "peer_ciphertext": "B5B0",
+      "our_decryption_of_peer_ciphertext": "0FCB",
+      "peer_decryption_of_our_ciphertext": "0FCB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BC35",
+      "key": "59CC",
+      "our_ciphertext": "8E2D",
+      "peer_ciphertext": "8E2D",
+      "our_decryption_of_peer_ciphertext": "BC35",
+      "peer_decryption_of_our_ciphertext": "BC35",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8A06",
+      "key": "7D32",
+      "our_ciphertext": "0DD7",
+      "peer_ciphertext": "0DD7",
+      "our_decryption_of_peer_ciphertext": "8A06",
+      "peer_decryption_of_our_ciphertext": "8A06",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0A6E",
+      "key": "E255",
+      "our_ciphertext": "194D",
+      "peer_ciphertext": "194D",
+      "our_decryption_of_peer_ciphertext": "0A6E",
+      "peer_decryption_of_our_ciphertext": "0A6E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CB59",
+      "key": "F537",
+      "our_ciphertext": "A3B0",
+      "peer_ciphertext": "A3B0",
+      "our_decryption_of_peer_ciphertext": "CB59",
+      "peer_decryption_of_our_ciphertext": "CB59",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "67B9",
+      "key": "B78A",
+      "our_ciphertext": "642C",
+      "peer_ciphertext": "642C",
+      "our_decryption_of_peer_ciphertext": "67B9",
+      "peer_decryption_of_our_ciphertext": "67B9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2521",
+      "key": "92FE",
+      "our_ciphertext": "4A95",
+      "peer_ciphertext": "4A95",
+      "our_decryption_of_peer_ciphertext": "2521",
+      "peer_decryption_of_our_ciphertext": "2521",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A16A",
+      "key": "AB56",
+      "our_ciphertext": "D57C",
+      "peer_ciphertext": "D57C",
+      "our_decryption_of_peer_ciphertext": "A16A",
+      "peer_decryption_of_our_ciphertext": "A16A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1C00",
+      "key": "94F7",
+      "our_ciphertext": "BE4A",
+      "peer_ciphertext": "BE4A",
+      "our_decryption_of_peer_ciphertext": "1C00",
+      "peer_decryption_of_our_ciphertext": "1C00",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FDF8",
+      "key": "51DF",
+      "our_ciphertext": "E01A",
+      "peer_ciphertext": "E01A",
+      "our_decryption_of_peer_ciphertext": "FDF8",
+      "peer_decryption_of_our_ciphertext": "FDF8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5012",
+      "key": "4D93",
+      "our_ciphertext": "127A",
+      "peer_ciphertext": "127A",
+      "our_decryption_of_peer_ciphertext": "5012",
+      "peer_decryption_of_our_ciphertext": "5012",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DBF9",
+      "key": "40E4",
+      "our_ciphertext": "EBB1",
+      "peer_ciphertext": "EBB1",
+      "our_decryption_of_peer_ciphertext": "DBF9",
+      "peer_decryption_of_our_ciphertext": "DBF9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8E54",
+      "key": "2DBA",
+      "our_ciphertext": "F28A",
+      "peer_ciphertext": "F28A",
+      "our_decryption_of_peer_ciphertext": "8E54",
+      "peer_decryption_of_our_ciphertext": "8E54",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9203",
+      "key": "A4B7",
+      "our_ciphertext": "3632",
+      "peer_ciphertext": "3632",
+      "our_decryption_of_peer_ciphertext": "9203",
+      "peer_decryption_of_our_ciphertext": "9203",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3207",
+      "key": "1E59",
+      "our_ciphertext": "6FE9",
+      "peer_ciphertext": "6FE9",
+      "our_decryption_of_peer_ciphertext": "3207",
+      "peer_decryption_of_our_ciphertext": "3207",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "621A",
+      "key": "8B4C",
+      "our_ciphertext": "EC3F",
+      "peer_ciphertext": "EC3F",
+      "our_decryption_of_peer_ciphertext": "621A",
+      "peer_decryption_of_our_ciphertext": "621A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2BF0",
+      "key": "5AAC",
+      "our_ciphertext": "E13B",
+      "peer_ciphertext": "E13B",
+      "our_decryption_of_peer_ciphertext": "2BF0",
+      "peer_decryption_of_our_ciphertext": "2BF0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E7E3",
+      "key": "751C",
+      "our_ciphertext": "1DF9",
+      "peer_ciphertext": "1DF9",
+      "our_decryption_of_peer_ciphertext": "E7E3",
+      "peer_decryption_of_our_ciphertext": "E7E3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AC55",
+      "key": "08B9",
+      "our_ciphertext": "4758",
+      "peer_ciphertext": "4758",
+      "our_decryption_of_peer_ciphertext": "AC55",
+      "peer_decryption_of_our_ciphertext": "AC55",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3BAA",
+      "key": "D969",
+      "our_ciphertext": "8086",
+      "peer_ciphertext": "8086",
+      "our_decryption_of_peer_ciphertext": "3BAA",
+      "peer_decryption_of_our_ciphertext": "3BAA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AE8E",
+      "key": "278E",
+      "our_ciphertext": "580B",
+      "peer_ciphertext": "580B",
+      "our_decryption_of_peer_ciphertext": "AE8E",
+      "peer_decryption_of_our_ciphertext": "AE8E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B135",
+      "key": "761E",
+      "our_ciphertext": "6327",
+      "peer_ciphertext": "6327",
+      "our_decryption_of_peer_ciphertext": "B135",
+      "peer_decryption_of_our_ciphertext": "B135",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FC44",
+      "key": "5E38",
+      "our_ciphertext": "9A5C",
+      "peer_ciphertext": "9A5C",
+      "our_decryption_of_peer_ciphertext": "FC44",
+      "peer_decryption_of_our_ciphertext": "FC44",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "88E9",
+      "key": "3661",
+      "our_ciphertext": "EFAE",
+      "peer_ciphertext": "EFAE",
+      "our_decryption_of_peer_ciphertext": "88E9",
+      "peer_decryption_of_our_ciphertext": "88E9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FD33",
+      "key": "96BE",
+      "our_ciphertext": "DFC1",
+      "peer_ciphertext": "DFC1",
+      "our_decryption_of_peer_ciphertext": "FD33",
+      "peer_decryption_of_our_ciphertext": "FD33",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EB7C",
+      "key": "A46C",
+      "our_ciphertext": "0777",
+      "peer_ciphertext": "0777",
+      "our_decryption_of_peer_ciphertext": "EB7C",
+      "peer_decryption_of_our_ciphertext": "EB7C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E0B7",
+      "key": "8EA3",
+      "our_ciphertext": "CEB6",
+      "peer_ciphertext": "CEB6",
+      "our_decryption_of_peer_ciphertext": "E0B7",
+      "peer_decryption_of_our_ciphertext": "E0B7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7275",
+      "key": "8FE0",
+      "our_ciphertext": "3D2A",
+      "peer_ciphertext": "3D2A",
+      "our_decryption_of_peer_ciphertext": "7275",
+      "peer_decryption_of_our_ciphertext": "7275",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9F68",
+      "key": "5A59",
+      "our_ciphertext": "F9D9",
+      "peer_ciphertext": "F9D9",
+      "our_decryption_of_peer_ciphertext": "9F68",
+      "peer_decryption_of_our_ciphertext": "9F68",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "32EB",
+      "key": "F31D",
+      "our_ciphertext": "15EB",
+      "peer_ciphertext": "15EB",
+      "our_decryption_of_peer_ciphertext": "32EB",
+      "peer_decryption_of_our_ciphertext": "32EB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D168",
+      "key": "DB24",
+      "our_ciphertext": "7C53",
+      "peer_ciphertext": "7C53",
+      "our_decryption_of_peer_ciphertext": "D168",
+      "peer_decryption_of_our_ciphertext": "D168",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D2C3",
+      "key": "2674",
+      "our_ciphertext": "42BF",
+      "peer_ciphertext": "42BF",
+      "our_decryption_of_peer_ciphertext": "D2C3",
+      "peer_decryption_of_our_ciphertext": "D2C3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "15E8",
+      "key": "17E3",
+      "our_ciphertext": "7FDD",
+      "peer_ciphertext": "7FDD",
+      "our_decryption_of_peer_ciphertext": "15E8",
+      "peer_decryption_of_our_ciphertext": "15E8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9F11",
+      "key": "79C2",
+      "our_ciphertext": "ADE5",
+      "peer_ciphertext": "ADE5",
+      "our_decryption_of_peer_ciphertext": "9F11",
+      "peer_decryption_of_our_ciphertext": "9F11",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A0E5",
+      "key": "9C6D",
+      "our_ciphertext": "9979",
+      "peer_ciphertext": "9979",
+      "our_decryption_of_peer_ciphertext": "A0E5",
+      "peer_decryption_of_our_ciphertext": "A0E5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A8C3",
+      "key": "6683",
+      "our_ciphertext": "E021",
+      "peer_ciphertext": "E021",
+      "our_decryption_of_peer_ciphertext": "A8C3",
+      "peer_decryption_of_our_ciphertext": "A8C3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "860C",
+      "key": "D037",
+      "our_ciphertext": "1F30",
+      "peer_ciphertext": "1F30",
+      "our_decryption_of_peer_ciphertext": "860C",
+      "peer_decryption_of_our_ciphertext": "860C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1CE2",
+      "key": "D68D",
+      "our_ciphertext": "086C",
+      "peer_ciphertext": "086C",
+      "our_decryption_of_peer_ciphertext": "1CE2",
+      "peer_decryption_of_our_ciphertext": "1CE2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5AAC",
+      "key": "C8E9",
+      "our_ciphertext": "3010",
+      "peer_ciphertext": "3010",
+      "our_decryption_of_peer_ciphertext": "5AAC",
+      "peer_decryption_of_our_ciphertext": "5AAC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BF70",
+      "key": "7CAA",
+      "our_ciphertext": "F459",
+      "peer_ciphertext": "F459",
+      "our_decryption_of_peer_ciphertext": "BF70",
+      "peer_decryption_of_our_ciphertext": "BF70",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "43F8",
+      "key": "CD61",
+      "our_ciphertext": "1665",
+      "peer_ciphertext": "1665",
+      "our_decryption_of_peer_ciphertext": "43F8",
+      "peer_decryption_of_our_ciphertext": "43F8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6E9E",
+      "key": "EAE2",
+      "our_ciphertext": "D102",
+      "peer_ciphertext": "D102",
+      "our_decryption_of_peer_ciphertext": "6E9E",
+      "peer_decryption_of_our_ciphertext": "6E9E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8D87",
+      "key": "1438",
+      "our_ciphertext": "310D",
+      "peer_ciphertext": "310D",
+      "our_decryption_of_peer_ciphertext": "8D87",
+      "peer_decryption_of_our_ciphertext": "8D87",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6AA2",
+      "key": "050A",
+      "our_ciphertext": "0EE0",
+      "peer_ciphertext": "0EE0",
+      "our_decryption_of_peer_ciphertext": "6AA2",
+      "peer_decryption_of_our_ciphertext": "6AA2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F378",
+      "key": "73C8",
+      "our_ciphertext": "1477",
+      "peer_ciphertext": "1477",
+      "our_decryption_of_peer_ciphertext": "F378",
+      "peer_decryption_of_our_ciphertext": "F378",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D225",
+      "key": "00E1",
+      "our_ciphertext": "B1BC",
+      "peer_ciphertext": "B1BC",
+      "our_decryption_of_peer_ciphertext": "D225",
+      "peer_decryption_of_our_ciphertext": "D225",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A4AC",
+      "key": "B5D8",
+      "our_ciphertext": "44AF",
+      "peer_ciphertext": "44AF",
+      "our_decryption_of_peer_ciphertext": "A4AC",
+      "peer_decryption_of_our_ciphertext": "A4AC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DFC0",
+      "key": "D033",
+      "our_ciphertext": "5C77",
+      "peer_ciphertext": "5C77",
+      "our_decryption_of_peer_ciphertext": "DFC0",
+      "peer_decryption_of_our_ciphertext": "DFC0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7331",
+      "key": "16FE",
+      "our_ciphertext": "60F5",
+      "peer_ciphertext": "60F5",
+      "our_decryption_of_peer_ciphertext": "7331",
+      "peer_decryption_of_our_ciphertext": "7331",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2827",
+      "key": "14F9",
+      "our_ciphertext": "ADBC",
+      "peer_ciphertext": "ADBC",
+      "our_decryption_of_peer_ciphertext": "2827",
+      "peer_decryption_of_our_ciphertext": "2827",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B24B",
+      "key": "F9A7",
+      "our_ciphertext": "E25C",
+      "peer_ciphertext": "E25C",
+      "our_decryption_of_peer_ciphertext": "B24B",
+      "peer_decryption_of_our_ciphertext": "B24B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D8E9",
+      "key": "C42A",
+      "our_ciphertext": "A8BA",
+      "peer_ciphertext": "A8BA",
+      "our_decryption_of_peer_ciphertext": "D8E9",
+      "peer_decryption_of_our_ciphertext": "D8E9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1D0D",
+      "key": "373A",
+      "our_ciphertext": "8639",
+      "peer_ciphertext": "8639",
+      "our_decryption_of_peer_ciphertext": "1D0D",
+      "peer_decryption_of_our_ciphertext": "1D0D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B179",
+      "key": "88B7",
+      "our_ciphertext": "F747",
+      "peer_ciphertext": "F747",
+      "our_decryption_of_peer_ciphertext": "B179",
+      "peer_decryption_of_our_ciphertext": "B179",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9ACF",
+      "key": "1F84",
+      "our_ciphertext": "6B4C",
+      "peer_ciphertext": "6B4C",
+      "our_decryption_of_peer_ciphertext": "9ACF",
+      "peer_decryption_of_our_ciphertext": "9ACF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2732",
+      "key": "75D5",
+      "our_ciphertext": "4EBE",
+      "peer_ciphertext": "4EBE",
+      "our_decryption_of_peer_ciphertext": "2732",
+      "peer_decryption_of_our_ciphertext": "2732",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7BAA",
+      "key": "BA8B",
+      "our_ciphertext": "14A3",
+      "peer_ciphertext": "14A3",
+      "our_decryption_of_peer_ciphertext": "7BAA",
+      "peer_decryption_of_our_ciphertext": "7BAA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9E52",
+      "key": "2EF7",
+      "our_ciphertext": "5593",
+      "peer_ciphertext": "5593",
+      "our_decryption_of_peer_ciphertext": "9E52",
+      "peer_decryption_of_our_ciphertext": "9E52",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A263",
+      "key": "F85C",
+      "our_ciphertext": "8163",
+      "peer_ciphertext": "8163",
+      "our_decryption_of_peer_ciphertext": "A263",
+      "peer_decryption_of_our_ciphertext": "A263",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "35DB",
+      "key": "D5FA",
+      "our_ciphertext": "250D",
+      "peer_ciphertext": "250D",
+      "our_decryption_of_peer_ciphertext": "35DB",
+      "peer_decryption_of_our_ciphertext": "35DB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5061",
+      "key": "2AA5",
+      "our_ciphertext": "8E08",
+      "peer_ciphertext": "8E08",
+      "our_decryption_of_peer_ciphertext": "5061",
+      "peer_decryption_of_our_ciphertext": "5061",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A7D5",
+      "key": "B2C7",
+      "our_ciphertext": "BDD2",
+      "peer_ciphertext": "BDD2",
+      "our_decryption_of_peer_ciphertext": "A7D5",
+      "peer_decryption_of_our_ciphertext": "A7D5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D2BC",
+      "key": "5079",
+      "our_ciphertext": "E888",
+      "peer_ciphertext": "E888",
+      "our_decryption_of_peer_ciphertext": "D2BC",
+      "peer_decryption_of_our_ciphertext": "D2BC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2C15",
+      "key": "C6F4",
+      "our_ciphertext": "A5F0",
+      "peer_ciphertext": "A5F0",
+      "our_decryption_of_peer_ciphertext": "2C15",
+      "peer_decryption_of_our_ciphertext": "2C15",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "ACE9",
+      "key": "CC5D",
+      "our_ciphertext": "BB02",
+      "peer_ciphertext": "BB02",
+      "our_decryption_of_peer_ciphertext": "ACE9",
+      "peer_decryption_of_our_ciphertext": "ACE9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "06B3",
+      "key": "1648",
+      "our_ciphertext": "2938",
+      "peer_ciphertext": "2938",
+      "our_decryption_of_peer_ciphertext": "06B3",
+      "peer_decryption_of_our_ciphertext": "06B3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "174A",
+      "key": "AEF3",
+      "our_ciphertext": "0C2E",
+      "peer_ciphertext": "0C2E",
+      "our_decryption_of_peer_ciphertext": "174A",
+      "peer_decryption_of_our_ciphertext": "174A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8DFA",
+      "key": "48BF",
+      "our_ciphertext": "EF71",
+      "peer_ciphertext": "EF71",
+      "our_decryption_of_peer_ciphertext": "8DFA",
+      "peer_decryption_of_our_ciphertext": "8DFA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EBE2",
+      "key": "9627",
+      "our_ciphertext": "5D7F",
+      "peer_ciphertext": "5D7F",
+      "our_decryption_of_peer_ciphertext": "EBE2",
+      "peer_decryption_of_our_ciphertext": "EBE2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EEC2",
+      "key": "E549",
+      "our_ciphertext": "7332",
+      "peer_ciphertext": "7332",
+      "our_decryption_of_peer_ciphertext": "EEC2",
+      "peer_decryption_of_our_ciphertext": "EEC2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3DA1",
+      "key": "2AEF",
+      "our_ciphertext": "71F6",
+      "peer_ciphertext": "71F6",
+      "our_decryption_of_peer_ciphertext": "3DA1",
+      "peer_decryption_of_our_ciphertext": "3DA1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A381",
+      "key": "D507",
+      "our_ciphertext": "B395",
+      "peer_ciphertext": "B395",
+      "our_decryption_of_peer_ciphertext": "A381",
+      "peer_decryption_of_our_ciphertext": "A381",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "316F",
+      "key": "AA72",
+      "our_ciphertext": "06F7",
+      "peer_ciphertext": "06F7",
+      "our_decryption_of_peer_ciphertext": "316F",
+      "peer_decryption_of_our_ciphertext": "316F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1E84",
+      "key": "A3D8",
+      "our_ciphertext": "C8E4",
+      "peer_ciphertext": "C8E4",
+      "our_decryption_of_peer_ciphertext": "1E84",
+      "peer_decryption_of_our_ciphertext": "1E84",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6A0C",
+      "key": "ED12",
+      "our_ciphertext": "79E2",
+      "peer_ciphertext": "79E2",
+      "our_decryption_of_peer_ciphertext": "6A0C",
+      "peer_decryption_of_our_ciphertext": "6A0C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9DD8",
+      "key": "7014",
+      "our_ciphertext": "EC1B",
+      "peer_ciphertext": "EC1B",
+      "our_decryption_of_peer_ciphertext": "9DD8",
+      "peer_decryption_of_our_ciphertext": "9DD8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8471",
+      "key": "60F0",
+      "our_ciphertext": "25E6",
+      "peer_ciphertext": "25E6",
+      "our_decryption_of_peer_ciphertext": "8471",
+      "peer_decryption_of_our_ciphertext": "8471",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "539B",
+      "key": "1985",
+      "our_ciphertext": "7468",
+      "peer_ciphertext": "7468",
+      "our_decryption_of_peer_ciphertext": "539B",
+      "peer_decryption_of_our_ciphertext": "539B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B00E",
+      "key": "F10B",
+      "our_ciphertext": "2470",
+      "peer_ciphertext": "2470",
+      "our_decryption_of_peer_ciphertext": "B00E",
+      "peer_decryption_of_our_ciphertext": "B00E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "314F",
+      "key": "3361",
+      "our_ciphertext": "B6BB",
+      "peer_ciphertext": "B6BB",
+      "our_decryption_of_peer_ciphertext": "314F",
+      "peer_decryption_of_our_ciphertext": "314F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "801F",
+      "key": "9575",
+      "our_ciphertext": "FF6B",
+      "peer_ciphertext": "FF6B",
+      "our_decryption_of_peer_ciphertext": "801F",
+      "peer_decryption_of_our_ciphertext": "801F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4FAD",
+      "key": "08D9",
+      "our_ciphertext": "6D8C",
+      "peer_ciphertext": "6D8C",
+      "our_decryption_of_peer_ciphertext": "4FAD",
+      "peer_decryption_of_our_ciphertext": "4FAD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B090",
+      "key": "293C",
+      "our_ciphertext": "EF15",
+      "peer_ciphertext": "EF15",
+      "our_decryption_of_peer_ciphertext": "B090",
+      "peer_decryption_of_our_ciphertext": "B090",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AF14",
+      "key": "A849",
+      "our_ciphertext": "2616",
+      "peer_ciphertext": "2616",
+      "our_decryption_of_peer_ciphertext": "AF14",
+      "peer_decryption_of_our_ciphertext": "AF14",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C262",
+      "key": "5F25",
+      "our_ciphertext": "4D7C",
+      "peer_ciphertext": "4D7C",
+      "our_decryption_of_peer_ciphertext": "C262",
+      "peer_decryption_of_our_ciphertext": "C262",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F6F7",
+      "key": "B408",
+      "our_ciphertext": "25EA",
+      "peer_ciphertext": "25EA",
+      "our_decryption_of_peer_ciphertext": "F6F7",
+      "peer_decryption_of_our_ciphertext": "F6F7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8625",
+      "key": "5A8B",
+      "our_ciphertext": "A75C",
+      "peer_ciphertext": "A75C",
+      "our_decryption_of_peer_ciphertext": "8625",
+      "peer_decryption_of_our_ciphertext": "8625",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A422",
+      "key": "E8FF",
+      "our_ciphertext": "F449",
+      "peer_ciphertext": "F449",
+      "our_decryption_of_peer_ciphertext": "A422",
+      "peer_decryption_of_our_ciphertext": "A422",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D8F7",
+      "key": "2D24",
+      "our_ciphertext": "F1DE",
+      "peer_ciphertext": "F1DE",
+      "our_decryption_of_peer_ciphertext": "D8F7",
+      "peer_decryption_of_our_ciphertext": "D8F7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "865A",
+      "key": "A546",
+      "our_ciphertext": "7F19",
+      "peer_ciphertext": "7F19",
+      "our_decryption_of_peer_ciphertext": "865A",
+      "peer_decryption_of_our_ciphertext": "865A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5D89",
+      "key": "383A",
+      "our_ciphertext": "8853",
+      "peer_ciphertext": "8853",
+      "our_decryption_of_peer_ciphertext": "5D89",
+      "peer_decryption_of_our_ciphertext": "5D89",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2E4F",
+      "key": "BD3A",
+      "our_ciphertext": "D6B4",
+      "peer_ciphertext": "D6B4",
+      "our_decryption_of_peer_ciphertext": "2E4F",
+      "peer_decryption_of_our_ciphertext": "2E4F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A8DE",
+      "key": "DFE9",
+      "our_ciphertext": "7AE1",
+      "peer_ciphertext": "7AE1",
+      "our_decryption_of_peer_ciphertext": "A8DE",
+      "peer_decryption_of_our_ciphertext": "A8DE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A037",
+      "key": "6798",
+      "our_ciphertext": "67C9",
+      "peer_ciphertext": "67C9",
+      "our_decryption_of_peer_ciphertext": "A037",
+      "peer_decryption_of_our_ciphertext": "A037",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "18CE",
+      "key": "C6F4",
+      "our_ciphertext": "E000",
+      "peer_ciphertext": "E000",
+      "our_decryption_of_peer_ciphertext": "18CE",
+      "peer_decryption_of_our_ciphertext": "18CE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "828A",
+      "key": "6358",
+      "our_ciphertext": "97F2",
+      "peer_ciphertext": "97F2",
+      "our_decryption_of_peer_ciphertext": "828A",
+      "peer_decryption_of_our_ciphertext": "828A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9758",
+      "key": "FC2D",
+      "our_ciphertext": "828A",
+      "peer_ciphertext": "828A",
+      "our_decryption_of_peer_ciphertext": "9758",
+      "peer_decryption_of_our_ciphertext": "9758",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5A2A",
+      "key": "1379",
+      "our_ciphertext": "3829",
+      "peer_ciphertext": "3829",
+      "our_decryption_of_peer_ciphertext": "5A2A",
+      "peer_decryption_of_our_ciphertext": "5A2A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6357",
+      "key": "58FA",
+      "our_ciphertext": "CD23",
+      "peer_ciphertext": "CD23",
+      "our_decryption_of_peer_ciphertext": "6357",
+      "peer_decryption_of_our_ciphertext": "6357",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2C26",
+      "key": "20CC",
+      "our_ciphertext": "BDF3",
+      "peer_ciphertext": "BDF3",
+      "our_decryption_of_peer_ciphertext": "2C26",
+      "peer_decryption_of_our_ciphertext": "2C26",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E136",
+      "key": "C67B",
+      "our_ciphertext": "B629",
+      "peer_ciphertext": "B629",
+      "our_decryption_of_peer_ciphertext": "E136",
+      "peer_decryption_of_our_ciphertext": "E136",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0A2E",
+      "key": "6FFE",
+      "our_ciphertext": "9794",
+      "peer_ciphertext": "9794",
+      "our_decryption_of_peer_ciphertext": "0A2E",
+      "peer_decryption_of_our_ciphertext": "0A2E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CC80",
+      "key": "D121",
+      "our_ciphertext": "ADE6",
+      "peer_ciphertext": "ADE6",
+      "our_decryption_of_peer_ciphertext": "CC80",
+      "peer_decryption_of_our_ciphertext": "CC80",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DBF7",
+      "key": "6AF2",
+      "our_ciphertext": "BCF8",
+      "peer_ciphertext": "BCF8",
+      "our_decryption_of_peer_ciphertext": "DBF7",
+      "peer_decryption_of_our_ciphertext": "DBF7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0DA1",
+      "key": "7B78",
+      "our_ciphertext": "FA44",
+      "peer_ciphertext": "FA44",
+      "our_decryption_of_peer_ciphertext": "0DA1",
+      "peer_decryption_of_our_ciphertext": "0DA1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4912",
+      "key": "3F98",
+      "our_ciphertext": "9865",
+      "peer_ciphertext": "9865",
+      "our_decryption_of_peer_ciphertext": "4912",
+      "peer_decryption_of_our_ciphertext": "4912",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FCC6",
+      "key": "E281",
+      "our_ciphertext": "475B",
+      "peer_ciphertext": "475B",
+      "our_decryption_of_peer_ciphertext": "FCC6",
+      "peer_decryption_of_our_ciphertext": "FCC6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7217",
+      "key": "2920",
+      "our_ciphertext": "A72E",
+      "peer_ciphertext": "A72E",
+      "our_decryption_of_peer_ciphertext": "7217",
+      "peer_decryption_of_our_ciphertext": "7217",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3614",
+      "key": "3E3D",
+      "our_ciphertext": "D434",
+      "peer_ciphertext": "D434",
+      "our_decryption_of_peer_ciphertext": "3614",
+      "peer_decryption_of_our_ciphertext": "3614",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8FE8",
+      "key": "5DAF",
+      "our_ciphertext": "8687",
+      "peer_ciphertext": "8687",
+      "our_decryption_of_peer_ciphertext": "8FE8",
+      "peer_decryption_of_our_ciphertext": "8FE8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0547",
+      "key": "5770",
+      "our_ciphertext": "7360",
+      "peer_ciphertext": "7360",
+      "our_decryption_of_peer_ciphertext": "0547",
+      "peer_decryption_of_our_ciphertext": "0547",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B550",
+      "key": "CE2B",
+      "our_ciphertext": "C6A3",
+      "peer_ciphertext": "C6A3",
+      "our_decryption_of_peer_ciphertext": "B550",
+      "peer_decryption_of_our_ciphertext": "B550",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6662",
+      "key": "DD20",
+      "our_ciphertext": "E93B",
+      "peer_ciphertext": "E93B",
+      "our_decryption_of_peer_ciphertext": "6662",
+      "peer_decryption_of_our_ciphertext": "6662",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EB2A",
+      "key": "70E2",
+      "our_ciphertext": "4F05",
+      "peer_ciphertext": "4F05",
+      "our_decryption_of_peer_ciphertext": "EB2A",
+      "peer_decryption_of_our_ciphertext": "EB2A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B119",
+      "key": "05B6",
+      "our_ciphertext": "6B1B",
+      "peer_ciphertext": "6B1B",
+      "our_decryption_of_peer_ciphertext": "B119",
+      "peer_decryption_of_our_ciphertext": "B119",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "46EA",
+      "key": "DFEB",
+      "our_ciphertext": "35C1",
+      "peer_ciphertext": "35C1",
+      "our_decryption_of_peer_ciphertext": "46EA",
+      "peer_decryption_of_our_ciphertext": "46EA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FE3E",
+      "key": "47B5",
+      "our_ciphertext": "0AAE",
+      "peer_ciphertext": "0AAE",
+      "our_decryption_of_peer_ciphertext": "FE3E",
+      "peer_decryption_of_our_ciphertext": "FE3E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4C44",
+      "key": "E714",
+      "our_ciphertext": "FA24",
+      "peer_ciphertext": "FA24",
+      "our_decryption_of_peer_ciphertext": "4C44",
+      "peer_decryption_of_our_ciphertext": "4C44",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5E2A",
+      "key": "9D10",
+      "our_ciphertext": "4D6E",
+      "peer_ciphertext": "4D6E",
+      "our_decryption_of_peer_ciphertext": "5E2A",
+      "peer_decryption_of_our_ciphertext": "5E2A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CE56",
+      "key": "28B8",
+      "our_ciphertext": "44C3",
+      "peer_ciphertext": "44C3",
+      "our_decryption_of_peer_ciphertext": "CE56",
+      "peer_decryption_of_our_ciphertext": "CE56",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A0EF",
+      "key": "9498",
+      "our_ciphertext": "8455",
+      "peer_ciphertext": "8455",
+      "our_decryption_of_peer_ciphertext": "A0EF",
+      "peer_decryption_of_our_ciphertext": "A0EF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8E36",
+      "key": "2B90",
+      "our_ciphertext": "3F74",
+      "peer_ciphertext": "3F74",
+      "our_decryption_of_peer_ciphertext": "8E36",
+      "peer_decryption_of_our_ciphertext": "8E36",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D389",
+      "key": "B30D",
+      "our_ciphertext": "6547",
+      "peer_ciphertext": "6547",
+      "our_decryption_of_peer_ciphertext": "D389",
+      "peer_decryption_of_our_ciphertext": "D389",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6BF6",
+      "key": "F827",
+      "our_ciphertext": "B0D1",
+      "peer_ciphertext": "B0D1",
+      "our_decryption_of_peer_ciphertext": "6BF6",
+      "peer_decryption_of_our_ciphertext": "6BF6",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8447",
+      "key": "389A",
+      "our_ciphertext": "0416",
+      "peer_ciphertext": "0416",
+      "our_decryption_of_peer_ciphertext": "8447",
+      "peer_decryption_of_our_ciphertext": "8447",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BC3E",
+      "key": "C002",
+      "our_ciphertext": "1897",
+      "peer_ciphertext": "1897",
+      "our_decryption_of_peer_ciphertext": "BC3E",
+      "peer_decryption_of_our_ciphertext": "BC3E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8C8B",
+      "key": "4F81",
+      "our_ciphertext": "0464",
+      "peer_ciphertext": "0464",
+      "our_decryption_of_peer_ciphertext": "8C8B",
+      "peer_decryption_of_our_ciphertext": "8C8B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5BAD",
+      "key": "D1C3",
+      "our_ciphertext": "610B",
+      "peer_ciphertext": "610B",
+      "our_decryption_of_peer_ciphertext": "5BAD",
+      "peer_decryption_of_our_ciphertext": "5BAD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CA67",
+      "key": "4A2E",
+      "our_ciphertext": "1C18",
+      "peer_ciphertext": "1C18",
+      "our_decryption_of_peer_ciphertext": "CA67",
+      "peer_decryption_of_our_ciphertext": "CA67",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D49B",
+      "key": "02BC",
+      "our_ciphertext": "75D9",
+      "peer_ciphertext": "75D9",
+      "our_decryption_of_peer_ciphertext": "D49B",
+      "peer_decryption_of_our_ciphertext": "D49B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A009",
+      "key": "E299",
+      "our_ciphertext": "6DC1",
+      "peer_ciphertext": "6DC1",
+      "our_decryption_of_peer_ciphertext": "A009",
+      "peer_decryption_of_our_ciphertext": "A009",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6E48",
+      "key": "8CA5",
+      "our_ciphertext": "BFB5",
+      "peer_ciphertext": "BFB5",
+      "our_decryption_of_peer_ciphertext": "6E48",
+      "peer_decryption_of_our_ciphertext": "6E48",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9D1A",
+      "key": "16D5",
+      "our_ciphertext": "1A19",
+      "peer_ciphertext": "1A19",
+      "our_decryption_of_peer_ciphertext": "9D1A",
+      "peer_decryption_of_our_ciphertext": "9D1A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B783",
+      "key": "896B",
+      "our_ciphertext": "BCE4",
+      "peer_ciphertext": "BCE4",
+      "our_decryption_of_peer_ciphertext": "B783",
+      "peer_decryption_of_our_ciphertext": "B783",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "80A9",
+      "key": "3570",
+      "our_ciphertext": "ADAE",
+      "peer_ciphertext": "ADAE",
+      "our_decryption_of_peer_ciphertext": "80A9",
+      "peer_decryption_of_our_ciphertext": "80A9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BFDC",
+      "key": "0B09",
+      "our_ciphertext": "411E",
+      "peer_ciphertext": "411E",
+      "our_decryption_of_peer_ciphertext": "BFDC",
+      "peer_decryption_of_our_ciphertext": "BFDC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F08A",
+      "key": "8F3D",
+      "our_ciphertext": "306B",
+      "peer_ciphertext": "306B",
+      "our_decryption_of_peer_ciphertext": "F08A",
+      "peer_decryption_of_our_ciphertext": "F08A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "150D",
+      "key": "3D54",
+      "our_ciphertext": "E726",
+      "peer_ciphertext": "E726",
+      "our_decryption_of_peer_ciphertext": "150D",
+      "peer_decryption_of_our_ciphertext": "150D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D6EF",
+      "key": "D9F0",
+      "our_ciphertext": "0558",
+      "peer_ciphertext": "0558",
+      "our_decryption_of_peer_ciphertext": "D6EF",
+      "peer_decryption_of_our_ciphertext": "D6EF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4F9E",
+      "key": "B6E8",
+      "our_ciphertext": "F714",
+      "peer_ciphertext": "F714",
+      "our_decryption_of_peer_ciphertext": "4F9E",
+      "peer_decryption_of_our_ciphertext": "4F9E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4AD7",
+      "key": "C3E7",
+      "our_ciphertext": "002F",
+      "peer_ciphertext": "002F",
+      "our_decryption_of_peer_ciphertext": "4AD7",
+      "peer_decryption_of_our_ciphertext": "4AD7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DAFC",
+      "key": "79A8",
+      "our_ciphertext": "8DBE",
+      "peer_ciphertext": "8DBE",
+      "our_decryption_of_peer_ciphertext": "DAFC",
+      "peer_decryption_of_our_ciphertext": "DAFC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F5B1",
+      "key": "8364",
+      "our_ciphertext": "5899",
+      "peer_ciphertext": "5899",
+      "our_decryption_of_peer_ciphertext": "F5B1",
+      "peer_decryption_of_our_ciphertext": "F5B1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5A38",
+      "key": "4369",
+      "our_ciphertext": "50B3",
+      "peer_ciphertext": "50B3",
+      "our_decryption_of_peer_ciphertext": "5A38",
+      "peer_decryption_of_our_ciphertext": "5A38",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "41D2",
+      "key": "7429",
+      "our_ciphertext": "BB8B",
+      "peer_ciphertext": "BB8B",
+      "our_decryption_of_peer_ciphertext": "41D2",
+      "peer_decryption_of_our_ciphertext": "41D2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2384",
+      "key": "5EBC",
+      "our_ciphertext": "1C00",
+      "peer_ciphertext": "1C00",
+      "our_decryption_of_peer_ciphertext": "2384",
+      "peer_decryption_of_our_ciphertext": "2384",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "21CB",
+      "key": "223B",
+      "our_ciphertext": "A1F1",
+      "peer_ciphertext": "A1F1",
+      "our_decryption_of_peer_ciphertext": "21CB",
+      "peer_decryption_of_our_ciphertext": "21CB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9B63",
+      "key": "8D43",
+      "our_ciphertext": "D674",
+      "peer_ciphertext": "D674",
+      "our_decryption_of_peer_ciphertext": "9B63",
+      "peer_decryption_of_our_ciphertext": "9B63",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "52D5",
+      "key": "20A4",
+      "our_ciphertext": "DCC1",
+      "peer_ciphertext": "DCC1",
+      "our_decryption_of_peer_ciphertext": "52D5",
+      "peer_decryption_of_our_ciphertext": "52D5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EDBF",
+      "key": "B791",
+      "our_ciphertext": "EAA1",
+      "peer_ciphertext": "EAA1",
+      "our_decryption_of_peer_ciphertext": "EDBF",
+      "peer_decryption_of_our_ciphertext": "EDBF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B272",
+      "key": "D5C1",
+      "our_ciphertext": "F3B2",
+      "peer_ciphertext": "F3B2",
+      "our_decryption_of_peer_ciphertext": "B272",
+      "peer_decryption_of_our_ciphertext": "B272",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "248F",
+      "key": "B014",
+      "our_ciphertext": "D274",
+      "peer_ciphertext": "D274",
+      "our_decryption_of_peer_ciphertext": "248F",
+      "peer_decryption_of_our_ciphertext": "248F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9B3F",
+      "key": "6E46",
+      "our_ciphertext": "62D3",
+      "peer_ciphertext": "62D3",
+      "our_decryption_of_peer_ciphertext": "9B3F",
+      "peer_decryption_of_our_ciphertext": "9B3F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "44FF",
+      "key": "AAA8",
+      "our_ciphertext": "17BF",
+      "peer_ciphertext": "17BF",
+      "our_decryption_of_peer_ciphertext": "44FF",
+      "peer_decryption_of_our_ciphertext": "44FF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E610",
+      "key": "18C1",
+      "our_ciphertext": "D562",
+      "peer_ciphertext": "D562",
+      "our_decryption_of_peer_ciphertext": "E610",
+      "peer_decryption_of_our_ciphertext": "E610",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F585",
+      "key": "E3B6",
+      "our_ciphertext": "CC61",
+      "peer_ciphertext": "CC61",
+      "our_decryption_of_peer_ciphertext": "F585",
+      "peer_decryption_of_our_ciphertext": "F585",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A3AB",
+      "key": "2255",
+      "our_ciphertext": "D2EF",
+      "peer_ciphertext": "D2EF",
+      "our_decryption_of_peer_ciphertext": "A3AB",
+      "peer_decryption_of_our_ciphertext": "A3AB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A656",
+      "key": "D4C2",
+      "our_ciphertext": "F583",
+      "peer_ciphertext": "F583",
+      "our_decryption_of_peer_ciphertext": "A656",
+      "peer_decryption_of_our_ciphertext": "A656",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5D8E",
+      "key": "DE51",
+      "our_ciphertext": "B407",
+      "peer_ciphertext": "B407",
+      "our_decryption_of_peer_ciphertext": "5D8E",
+      "peer_decryption_of_our_ciphertext": "5D8E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "670B",
+      "key": "48BD",
+      "our_ciphertext": "6711",
+      "peer_ciphertext": "6711",
+      "our_decryption_of_peer_ciphertext": "670B",
+      "peer_decryption_of_our_ciphertext": "670B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7C43",
+      "key": "DD36",
+      "our_ciphertext": "52FC",
+      "peer_ciphertext": "52FC",
+      "our_decryption_of_peer_ciphertext": "7C43",
+      "peer_decryption_of_our_ciphertext": "7C43",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F375",
+      "key": "8ADD",
+      "our_ciphertext": "6CF7",
+      "peer_ciphertext": "6CF7",
+      "our_decryption_of_peer_ciphertext": "F375",
+      "peer_decryption_of_our_ciphertext": "F375",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2A1B",
+      "key": "6C6E",
+      "our_ciphertext": "4086",
+      "peer_ciphertext": "4086",
+      "our_decryption_of_peer_ciphertext": "2A1B",
+      "peer_decryption_of_our_ciphertext": "2A1B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "799A",
+      "key": "3089",
+      "our_ciphertext": "2D21",
+      "peer_ciphertext": "2D21",
+      "our_decryption_of_peer_ciphertext": "799A",
+      "peer_decryption_of_our_ciphertext": "799A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F27A",
+      "key": "4AB9",
+      "our_ciphertext": "13B7",
+      "peer_ciphertext": "13B7",
+      "our_decryption_of_peer_ciphertext": "F27A",
+      "peer_decryption_of_our_ciphertext": "F27A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "40B4",
+      "key": "4726",
+      "our_ciphertext": "FD9F",
+      "peer_ciphertext": "FD9F",
+      "our_decryption_of_peer_ciphertext": "40B4",
+      "peer_decryption_of_our_ciphertext": "40B4",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "58A9",
+      "key": "8CC7",
+      "our_ciphertext": "9E3F",
+      "peer_ciphertext": "9E3F",
+      "our_decryption_of_peer_ciphertext": "58A9",
+      "peer_decryption_of_our_ciphertext": "58A9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "07D7",
+      "key": "FD51",
+      "our_ciphertext": "4C1A",
+      "peer_ciphertext": "4C1A",
+      "our_decryption_of_peer_ciphertext": "07D7",
+      "peer_decryption_of_our_ciphertext": "07D7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BC0A",
+      "key": "587C",
+      "our_ciphertext": "06A8",
+      "peer_ciphertext": "06A8",
+      "our_decryption_of_peer_ciphertext": "BC0A",
+      "peer_decryption_of_our_ciphertext": "BC0A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "118F",
+      "key": "108D",
+      "our_ciphertext": "EF95",
+      "peer_ciphertext": "EF95",
+      "our_decryption_of_peer_ciphertext": "118F",
+      "peer_decryption_of_our_ciphertext": "118F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7F99",
+      "key": "2E7A",
+      "our_ciphertext": "9949",
+      "peer_ciphertext": "9949",
+      "our_decryption_of_peer_ciphertext": "7F99",
+      "peer_decryption_of_our_ciphertext": "7F99",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "627D",
+      "key": "DAD2",
+      "our_ciphertext": "F74F",
+      "peer_ciphertext": "F74F",
+      "our_decryption_of_peer_ciphertext": "627D",
+      "peer_decryption_of_our_ciphertext": "627D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AF96",
+      "key": "9475",
+      "our_ciphertext": "AB49",
+      "peer_ciphertext": "AB49",
+      "our_decryption_of_peer_ciphertext": "AF96",
+      "peer_decryption_of_our_ciphertext": "AF96",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "249F",
+      "key": "B27B",
+      "our_ciphertext": "4C74",
+      "peer_ciphertext": "4C74",
+      "our_decryption_of_peer_ciphertext": "249F",
+      "peer_decryption_of_our_ciphertext": "249F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7A4A",
+      "key": "2F09",
+      "our_ciphertext": "770D",
+      "peer_ciphertext": "770D",
+      "our_decryption_of_peer_ciphertext": "7A4A",
+      "peer_decryption_of_our_ciphertext": "7A4A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1137",
+      "key": "DE7D",
+      "our_ciphertext": "5E3E",
+      "peer_ciphertext": "5E3E",
+      "our_decryption_of_peer_ciphertext": "1137",
+      "peer_decryption_of_our_ciphertext": "1137",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8595",
+      "key": "15EB",
+      "our_ciphertext": "9028",
+      "peer_ciphertext": "9028",
+      "our_decryption_of_peer_ciphertext": "8595",
+      "peer_decryption_of_our_ciphertext": "8595",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4CC8",
+      "key": "5A79",
+      "our_ciphertext": "2329",
+      "peer_ciphertext": "2329",
+      "our_decryption_of_peer_ciphertext": "4CC8",
+      "peer_decryption_of_our_ciphertext": "4CC8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4D00",
+      "key": "0B63",
+      "our_ciphertext": "4DF0",
+      "peer_ciphertext": "4DF0",
+      "our_decryption_of_peer_ciphertext": "4D00",
+      "peer_decryption_of_our_ciphertext": "4D00",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FEA8",
+      "key": "193D",
+      "our_ciphertext": "F530",
+      "peer_ciphertext": "F530",
+      "our_decryption_of_peer_ciphertext": "FEA8",
+      "peer_decryption_of_our_ciphertext": "FEA8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6515",
+      "key": "5A7C",
+      "our_ciphertext": "3DB1",
+      "peer_ciphertext": "3DB1",
+      "our_decryption_of_peer_ciphertext": "6515",
+      "peer_decryption_of_our_ciphertext": "6515",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3B32",
+      "key": "6932",
+      "our_ciphertext": "B100",
+      "peer_ciphertext": "B100",
+      "our_decryption_of_peer_ciphertext": "3B32",
+      "peer_decryption_of_our_ciphertext": "3B32",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "742D",
+      "key": "BEFA",
+      "our_ciphertext": "DAD4",
+      "peer_ciphertext": "DAD4",
+      "our_decryption_of_peer_ciphertext": "742D",
+      "peer_decryption_of_our_ciphertext": "742D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9E1D",
+      "key": "F955",
+      "our_ciphertext": "A1A8",
+      "peer_ciphertext": "A1A8",
+      "our_decryption_of_peer_ciphertext": "9E1D",
+      "peer_decryption_of_our_ciphertext": "9E1D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "65FE",
+      "key": "05C1",
+      "our_ciphertext": "A3BE",
+      "peer_ciphertext": "A3BE",
+      "our_decryption_of_peer_ciphertext": "65FE",
+      "peer_decryption_of_our_ciphertext": "65FE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8D94",
+      "key": "8512",
+      "our_ciphertext": "3D12",
+      "peer_ciphertext": "3D12",
+      "our_decryption_of_peer_ciphertext": "8D94",
+      "peer_decryption_of_our_ciphertext": "8D94",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "802B",
+      "key": "FB0F",
+      "our_ciphertext": "0250",
+      "peer_ciphertext": "0250",
+      "our_decryption_of_peer_ciphertext": "802B",
+      "peer_decryption_of_our_ciphertext": "802B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1FFF",
+      "key": "9816",
+      "our_ciphertext": "F2B1",
+      "peer_ciphertext": "F2B1",
+      "our_decryption_of_peer_ciphertext": "1FFF",
+      "peer_decryption_of_our_ciphertext": "1FFF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "153D",
+      "key": "EBEE",
+      "our_ciphertext": "7742",
+      "peer_ciphertext": "7742",
+      "our_decryption_of_peer_ciphertext": "153D",
+      "peer_decryption_of_our_ciphertext": "153D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3227",
+      "key": "62F9",
+      "our_ciphertext": "E87D",
+      "peer_ciphertext": "E87D",
+      "our_decryption_of_peer_ciphertext": "3227",
+      "peer_decryption_of_our_ciphertext": "3227",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BC25",
+      "key": "C396",
+      "our_ciphertext": "1CD9",
+      "peer_ciphertext": "1CD9",
+      "our_decryption_of_peer_ciphertext": "BC25",
+      "peer_decryption_of_our_ciphertext": "BC25",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D0E5",
+      "key": "8F90",
+      "our_ciphertext": "8A4F",
+      "peer_ciphertext": "8A4F",
+      "our_decryption_of_peer_ciphertext": "D0E5",
+      "peer_decryption_of_our_ciphertext": "D0E5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3A63",
+      "key": "00BC",
+      "our_ciphertext": "9EB4",
+      "peer_ciphertext": "9EB4",
+      "our_decryption_of_peer_ciphertext": "3A63",
+      "peer_decryption_of_our_ciphertext": "3A63",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "ED94",
+      "key": "1AA6",
+      "our_ciphertext": "8202",
+      "peer_ciphertext": "8202",
+      "our_decryption_of_peer_ciphertext": "ED94",
+      "peer_decryption_of_our_ciphertext": "ED94",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "71F7",
+      "key": "7D40",
+      "our_ciphertext": "A33F",
+      "peer_ciphertext": "A33F",
+      "our_decryption_of_peer_ciphertext": "71F7",
+      "peer_decryption_of_our_ciphertext": "71F7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "160F",
+      "key": "4AA4",
+      "our_ciphertext": "1399",
+      "peer_ciphertext": "1399",
+      "our_decryption_of_peer_ciphertext": "160F",
+      "peer_decryption_of_our_ciphertext": "160F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D144",
+      "key": "1776",
+      "our_ciphertext": "42A0",
+      "peer_ciphertext": "42A0",
+      "our_decryption_of_peer_ciphertext": "D144",
+      "peer_decryption_of_our_ciphertext": "D144",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "80A2",
+      "key": "2A07",
+      "our_ciphertext": "299A",
+      "peer_ciphertext": "299A",
+      "our_decryption_of_peer_ciphertext": "80A2",
+      "peer_decryption_of_our_ciphertext": "80A2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "356B",
+      "key": "52CA",
+      "our_ciphertext": "BEA2",
+      "peer_ciphertext": "BEA2",
+      "our_decryption_of_peer_ciphertext": "356B",
+      "peer_decryption_of_our_ciphertext": "356B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F435",
+      "key": "1220",
+      "our_ciphertext": "69E3",
+      "peer_ciphertext": "69E3",
+      "our_decryption_of_peer_ciphertext": "F435",
+      "peer_decryption_of_our_ciphertext": "F435",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B06D",
+      "key": "3EBA",
+      "our_ciphertext": "D588",
+      "peer_ciphertext": "D588",
+      "our_decryption_of_peer_ciphertext": "B06D",
+      "peer_decryption_of_our_ciphertext": "B06D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4278",
+      "key": "695B",
+      "our_ciphertext": "B123",
+      "peer_ciphertext": "B123",
+      "our_decryption_of_peer_ciphertext": "4278",
+      "peer_decryption_of_our_ciphertext": "4278",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0222",
+      "key": "5C03",
+      "our_ciphertext": "08AA",
+      "peer_ciphertext": "08AA",
+      "our_decryption_of_peer_ciphertext": "0222",
+      "peer_decryption_of_our_ciphertext": "0222",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0D33",
+      "key": "7746",
+      "our_ciphertext": "0231",
+      "peer_ciphertext": "0231",
+      "our_decryption_of_peer_ciphertext": "0D33",
+      "peer_decryption_of_our_ciphertext": "0D33",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "150F",
+      "key": "E5C9",
+      "our_ciphertext": "F3E0",
+      "peer_ciphertext": "F3E0",
+      "our_decryption_of_peer_ciphertext": "150F",
+      "peer_decryption_of_our_ciphertext": "150F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B133",
+      "key": "CCAC",
+      "our_ciphertext": "8EEA",
+      "peer_ciphertext": "8EEA",
+      "our_decryption_of_peer_ciphertext": "B133",
+      "peer_decryption_of_our_ciphertext": "B133",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1E24",
+      "key": "CCB0",
+      "our_ciphertext": "39FF",
+      "peer_ciphertext": "39FF",
+      "our_decryption_of_peer_ciphertext": "1E24",
+      "peer_decryption_of_our_ciphertext": "1E24",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9043",
+      "key": "D0B7",
+      "our_ciphertext": "2AA3",
+      "peer_ciphertext": "2AA3",
+      "our_decryption_of_peer_ciphertext": "9043",
+      "peer_decryption_of_our_ciphertext": "9043",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "099A",
+      "key": "E9B5",
+      "our_ciphertext": "6024",
+      "peer_ciphertext": "6024",
+      "our_decryption_of_peer_ciphertext": "099A",
+      "peer_decryption_of_our_ciphertext": "099A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "251F",
+      "key": "B35F",
+      "our_ciphertext": "4B80",
+      "peer_ciphertext": "4B80",
+      "our_decryption_of_peer_ciphertext": "251F",
+      "peer_decryption_of_our_ciphertext": "251F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2988",
+      "key": "F392",
+      "our_ciphertext": "E583",
+      "peer_ciphertext": "E583",
+      "our_decryption_of_peer_ciphertext": "2988",
+      "peer_decryption_of_our_ciphertext": "2988",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CF03",
+      "key": "0214",
+      "our_ciphertext": "3C61",
+      "peer_ciphertext": "3C61",
+      "our_decryption_of_peer_ciphertext": "CF03",
+      "peer_decryption_of_our_ciphertext": "CF03",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "ED35",
+      "key": "9B6D",
+      "our_ciphertext": "7B55",
+      "peer_ciphertext": "7B55",
+      "our_decryption_of_peer_ciphertext": "ED35",
+      "peer_decryption_of_our_ciphertext": "ED35",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "49D0",
+      "key": "A6C2",
+      "our_ciphertext": "FBED",
+      "peer_ciphertext": "FBED",
+      "our_decryption_of_peer_ciphertext": "49D0",
+      "peer_decryption_of_our_ciphertext": "49D0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "33EF",
+      "key": "C64C",
+      "our_ciphertext": "FF47",
+      "peer_ciphertext": "FF47",
+      "our_decryption_of_peer_ciphertext": "33EF",
+      "peer_decryption_of_our_ciphertext": "33EF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "248F",
+      "key": "FD80",
+      "our_ciphertext": "90DC",
+      "peer_ciphertext": "90DC",
+      "our_decryption_of_peer_ciphertext": "248F",
+      "peer_decryption_of_our_ciphertext": "248F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4E87",
+      "key": "A42C",
+      "our_ciphertext": "987D",
+      "peer_ciphertext": "987D",
+      "our_decryption_of_peer_ciphertext": "4E87",
+      "peer_decryption_of_our_ciphertext": "4E87",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D759",
+      "key": "779C",
+      "our_ciphertext": "7451",
+      "peer_ciphertext": "7451",
+      "our_decryption_of_peer_ciphertext": "D759",
+      "peer_decryption_of_our_ciphertext": "D759",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C33D",
+      "key": "B293",
+      "our_ciphertext": "D1B1",
+      "peer_ciphertext": "D1B1",
+      "our_decryption_of_peer_ciphertext": "C33D",
+      "peer_decryption_of_our_ciphertext": "C33D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1966",
+      "key": "6DBA",
+      "our_ciphertext": "F25A",
+      "peer_ciphertext": "F25A",
+      "our_decryption_of_peer_ciphertext": "1966",
+      "peer_decryption_of_our_ciphertext": "1966",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8ABF",
+      "key": "F800",
+      "our_ciphertext": "4BCB",
+      "peer_ciphertext": "4BCB",
+      "our_decryption_of_peer_ciphertext": "8ABF",
+      "peer_decryption_of_our_ciphertext": "8ABF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "96BA",
+      "key": "D1A0",
+      "our_ciphertext": "FCC1",
+      "peer_ciphertext": "FCC1",
+      "our_decryption_of_peer_ciphertext": "96BA",
+      "peer_decryption_of_our_ciphertext": "96BA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6CB3",
+      "key": "3721",
+      "our_ciphertext": "9664",
+      "peer_ciphertext": "9664",
+      "our_decryption_of_peer_ciphertext": "6CB3",
+      "peer_decryption_of_our_ciphertext": "6CB3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E0C3",
+      "key": "1558",
+      "our_ciphertext": "D56E",
+      "peer_ciphertext": "D56E",
+      "our_decryption_of_peer_ciphertext": "E0C3",
+      "peer_decryption_of_our_ciphertext": "E0C3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8496",
+      "key": "9302",
+      "our_ciphertext": "18AC",
+      "peer_ciphertext": "18AC",
+      "our_decryption_of_peer_ciphertext": "8496",
+      "peer_decryption_of_our_ciphertext": "8496",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5A55",
+      "key": "4ADC",
+      "our_ciphertext": "9AA3",
+      "peer_ciphertext": "9AA3",
+      "our_decryption_of_peer_ciphertext": "5A55",
+      "peer_decryption_of_our_ciphertext": "5A55",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1CF1",
+      "key": "FCE7",
+      "our_ciphertext": "F001",
+      "peer_ciphertext": "F001",
+      "our_decryption_of_peer_ciphertext": "1CF1",
+      "peer_decryption_of_our_ciphertext": "1CF1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0935",
+      "key": "11C9",
+      "our_ciphertext": "5616",
+      "peer_ciphertext": "5616",
+      "our_decryption_of_peer_ciphertext": "0935",
+      "peer_decryption_of_our_ciphertext": "0935",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B6CF",
+      "key": "FA1B",
+      "our_ciphertext": "02C0",
+      "peer_ciphertext": "02C0",
+      "our_decryption_of_peer_ciphertext": "B6CF",
+      "peer_decryption_of_our_ciphertext": "B6CF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A7BC",
+      "key": "1C50",
+      "our_ciphertext": "590F",
+      "peer_ciphertext": "590F",
+      "our_decryption_of_peer_ciphertext": "A7BC",
+      "peer_decryption_of_our_ciphertext": "A7BC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9A2B",
+      "key": "F44F",
+      "our_ciphertext": "93E8",
+      "peer_ciphertext": "93E8",
+      "our_decryption_of_peer_ciphertext": "9A2B",
+      "peer_decryption_of_our_ciphertext": "9A2B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "63DF",
+      "key": "452B",
+      "our_ciphertext": "CA09",
+      "peer_ciphertext": "CA09",
+      "our_decryption_of_peer_ciphertext": "63DF",
+      "peer_decryption_of_our_ciphertext": "63DF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9D70",
+      "key": "C28F",
+      "our_ciphertext": "DC39",
+      "peer_ciphertext": "DC39",
+      "our_decryption_of_peer_ciphertext": "9D70",
+      "peer_decryption_of_our_ciphertext": "9D70",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BD16",
+      "key": "9158",
+      "our_ciphertext": "FB06",
+      "peer_ciphertext": "FB06",
+      "our_decryption_of_peer_ciphertext": "BD16",
+      "peer_decryption_of_our_ciphertext": "BD16",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6666",
+      "key": "05F3",
+      "our_ciphertext": "345E",
+      "peer_ciphertext": "345E",
+      "our_decryption_of_peer_ciphertext": "6666",
+      "peer_decryption_of_our_ciphertext": "6666",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A339",
+      "key": "2475",
+      "our_ciphertext": "3411",
+      "peer_ciphertext": "3411",
+      "our_decryption_of_peer_ciphertext": "A339",
+      "peer_decryption_of_our_ciphertext": "A339",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8190",
+      "key": "26D2",
+      "our_ciphertext": "C9B6",
+      "peer_ciphertext": "C9B6",
+      "our_decryption_of_peer_ciphertext": "8190",
+      "peer_decryption_of_our_ciphertext": "8190",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BB30",
+      "key": "D983",
+      "our_ciphertext": "D741",
+      "peer_ciphertext": "D741",
+      "our_decryption_of_peer_ciphertext": "BB30",
+      "peer_decryption_of_our_ciphertext": "BB30",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "880B",
+      "key": "C62D",
+      "our_ciphertext": "936A",
+      "peer_ciphertext": "936A",
+      "our_decryption_of_peer_ciphertext": "880B",
+      "peer_decryption_of_our_ciphertext": "880B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9CC4",
+      "key": "F00C",
+      "our_ciphertext": "F68D",
+      "peer_ciphertext": "F68D",
+      "our_decryption_of_peer_ciphertext": "9CC4",
+      "peer_decryption_of_our_ciphertext": "9CC4",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "19B2",
+      "key": "5C2F",
+      "our_ciphertext": "B9CB",
+      "peer_ciphertext": "B9CB",
+      "our_decryption_of_peer_ciphertext": "19B2",
+      "peer_decryption_of_our_ciphertext": "19B2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D430",
+      "key": "4A7B",
+      "our_ciphertext": "5950",
+      "peer_ciphertext": "5950",
+      "our_decryption_of_peer_ciphertext": "D430",
+      "peer_decryption_of_our_ciphertext": "D430",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E08F",
+      "key": "DE8F",
+      "our_ciphertext": "78EC",
+      "peer_ciphertext": "78EC",
+      "our_decryption_of_peer_ciphertext": "E08F",
+      "peer_decryption_of_our_ciphertext": "E08F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "605A",
+      "key": "5EC5",
+      "our_ciphertext": "C29B",
+      "peer_ciphertext": "C29B",
+      "our_decryption_of_peer_ciphertext": "605A",
+      "peer_decryption_of_our_ciphertext": "605A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F790",
+      "key": "99B0",
+      "our_ciphertext": "121A",
+      "peer_ciphertext": "121A",
+      "our_decryption_of_peer_ciphertext": "F790",
+      "peer_decryption_of_our_ciphertext": "F790",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5849",
+      "key": "1F71",
+      "our_ciphertext": "E7FF",
+      "peer_ciphertext": "E7FF",
+      "our_decryption_of_peer_ciphertext": "5849",
+      "peer_decryption_of_our_ciphertext": "5849",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3815",
+      "key": "0B9E",
+      "our_ciphertext": "8358",
+      "peer_ciphertext": "8358",
+      "our_decryption_of_peer_ciphertext": "3815",
+      "peer_decryption_of_our_ciphertext": "3815",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F2EF",
+      "key": "7B99",
+      "our_ciphertext": "9514",
+      "peer_ciphertext": "9514",
+      "our_decryption_of_peer_ciphertext": "F2EF",
+      "peer_decryption_of_our_ciphertext": "F2EF",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5BDB",
+      "key": "2540",
+      "our_ciphertext": "6AD9",
+      "peer_ciphertext": "6AD9",
+      "our_decryption_of_peer_ciphertext": "5BDB",
+      "peer_decryption_of_our_ciphertext": "5BDB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2D9B",
+      "key": "7BCA",
+      "our_ciphertext": "C8C4",
+      "peer_ciphertext": "C8C4",
+      "our_decryption_of_peer_ciphertext": "2D9B",
+      "peer_decryption_of_our_ciphertext": "2D9B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "ECD5",
+      "key": "6C48",
+      "our_ciphertext": "2B99",
+      "peer_ciphertext": "2B99",
+      "our_decryption_of_peer_ciphertext": "ECD5",
+      "peer_decryption_of_our_ciphertext": "ECD5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6042",
+      "key": "C41F",
+      "our_ciphertext": "82FA",
+      "peer_ciphertext": "82FA",
+      "our_decryption_of_peer_ciphertext": "6042",
+      "peer_decryption_of_our_ciphertext": "6042",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "615D",
+      "key": "171C",
+      "our_ciphertext": "A628",
+      "peer_ciphertext": "A628",
+      "our_decryption_of_peer_ciphertext": "615D",
+      "peer_decryption_of_our_ciphertext": "615D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8675",
+      "key": "4829",
+      "our_ciphertext": "B7F6",
+      "peer_ciphertext": "B7F6",
+      "our_decryption_of_peer_ciphertext": "8675",
+      "peer_decryption_of_our_ciphertext": "8675",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6639",
+      "key": "5BB0",
+      "our_ciphertext": "413E",
+      "peer_ciphertext": "413E",
+      "our_decryption_of_peer_ciphertext": "6639",
+      "peer_decryption_of_our_ciphertext": "6639",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D1FE",
+      "key": "A8F3",
+      "our_ciphertext": "2B53",
+      "peer_ciphertext": "2B53",
+      "our_decryption_of_peer_ciphertext": "D1FE",
+      "peer_decryption_of_our_ciphertext": "D1FE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B76D",
+      "key": "0364",
+      "our_ciphertext": "E91E",
+      "peer_ciphertext": "E91E",
+      "our_decryption_of_peer_ciphertext": "B76D",
+      "peer_decryption_of_our_ciphertext": "B76D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1829",
+      "key": "84F3",
+      "our_ciphertext": "3A2D",
+      "peer_ciphertext": "3A2D",
+      "our_decryption_of_peer_ciphertext": "1829",
+      "peer_decryption_of_our_ciphertext": "1829",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "96BD",
+      "key": "61DE",
+      "our_ciphertext": "A911",
+      "peer_ciphertext": "A911",
+      "our_decryption_of_peer_ciphertext": "96BD",
+      "peer_decryption_of_our_ciphertext": "96BD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "646D",
+      "key": "2C2D",
+      "our_ciphertext": "72BA",
+      "peer_ciphertext": "72BA",
+      "our_decryption_of_peer_ciphertext": "646D",
+      "peer_decryption_of_our_ciphertext": "646D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3971",
+      "key": "E60F",
+      "our_ciphertext": "3295",
+      "peer_ciphertext": "3295",
+      "our_decryption_of_peer_ciphertext": "3971",
+      "peer_decryption_of_our_ciphertext": "3971",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "04A2",
+      "key": "A5EA",
+      "our_ciphertext": "A7EA",
+      "peer_ciphertext": "A7EA",
+      "our_decryption_of_peer_ciphertext": "04A2",
+      "peer_decryption_of_our_ciphertext": "04A2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7D79",
+      "key": "7E14",
+      "our_ciphertext": "6A97",
+      "peer_ciphertext": "6A97",
+      "our_decryption_of_peer_ciphertext": "7D79",
+      "peer_decryption_of_our_ciphertext": "7D79",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6EF1",
+      "key": "3FE7",
+      "our_ciphertext": "A0D2",
+      "peer_ciphertext": "A0D2",
+      "our_decryption_of_peer_ciphertext": "6EF1",
+      "peer_decryption_of_our_ciphertext": "6EF1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C41D",
+      "key": "0C4A",
+      "our_ciphertext": "3FC2",
+      "peer_ciphertext": "3FC2",
+      "our_decryption_of_peer_ciphertext": "C41D",
+      "peer_decryption_of_our_ciphertext": "C41D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "12DB",
+      "key": "3595",
+      "our_ciphertext": "1426",
+      "peer_ciphertext": "1426",
+      "our_decryption_of_peer_ciphertext": "12DB",
+      "peer_decryption_of_our_ciphertext": "12DB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E41C",
+      "key": "2C6E",
+      "our_ciphertext": "3CB6",
+      "peer_ciphertext": "3CB6",
+      "our_decryption_of_peer_ciphertext": "E41C",
+      "peer_decryption_of_our_ciphertext": "E41C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B955",
+      "key": "4480",
+      "our_ciphertext": "48E2",
+      "peer_ciphertext": "48E2",
+      "our_decryption_of_peer_ciphertext": "B955",
+      "peer_decryption_of_our_ciphertext": "B955",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "02AA",
+      "key": "983D",
+      "our_ciphertext": "370E",
+      "peer_ciphertext": "370E",
+      "our_decryption_of_peer_ciphertext": "02AA",
+      "peer_decryption_of_our_ciphertext": "02AA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9D75",
+      "key": "DF58",
+      "our_ciphertext": "3C44",
+      "peer_ciphertext": "3C44",
+      "our_decryption_of_peer_ciphertext": "9D75",
+      "peer_decryption_of_our_ciphertext": "9D75",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0855",
+      "key": "4830",
+      "our_ciphertext": "1773",
+      "peer_ciphertext": "1773",
+      "our_decryption_of_peer_ciphertext": "0855",
+      "peer_decryption_of_our_ciphertext": "0855",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "50D0",
+      "key": "F7FD",
+      "our_ciphertext": "901A",
+      "peer_ciphertext": "901A",
+      "our_decryption_of_peer_ciphertext": "50D0",
+      "peer_decryption_of_our_ciphertext": "50D0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1101",
+      "key": "0084",
+      "our_ciphertext": "D677",
+      "peer_ciphertext": "D677",
+      "our_decryption_of_peer_ciphertext": "1101",
+      "peer_decryption_of_our_ciphertext": "1101",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "90A8",
+      "key": "DFB0",
+      "our_ciphertext": "3F86",
+      "peer_ciphertext": "3F86",
+      "our_decryption_of_peer_ciphertext": "90A8",
+      "peer_decryption_of_our_ciphertext": "90A8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5CEA",
+      "key": "7B21",
+      "our_ciphertext": "FA2F",
+      "peer_ciphertext": "FA2F",
+      "our_decryption_of_peer_ciphertext": "5CEA",
+      "peer_decryption_of_our_ciphertext": "5CEA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9B61",
+      "key": "2479",
+      "our_ciphertext": "4AFD",
+      "peer_ciphertext": "4AFD",
+      "our_decryption_of_peer_ciphertext": "9B61",
+      "peer_decryption_of_our_ciphertext": "9B61",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BAC8",
+      "key": "00B3",
+      "our_ciphertext": "50F9",
+      "peer_ciphertext": "50F9",
+      "our_decryption_of_peer_ciphertext": "BAC8",
+      "peer_decryption_of_our_ciphertext": "BAC8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4740",
+      "key": "CFE7",
+      "our_ciphertext": "E35F",
+      "peer_ciphertext": "E35F",
+      "our_decryption_of_peer_ciphertext": "4740",
+      "peer_decryption_of_our_ciphertext": "4740",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4C59",
+      "key": "F2A7",
+      "our_ciphertext": "6505",
+      "peer_ciphertext": "6505",
+      "our_decryption_of_peer_ciphertext": "4C59",
+      "peer_decryption_of_our_ciphertext": "4C59",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CD7C",
+      "key": "8691",
+      "our_ciphertext": "BD4C",
+      "peer_ciphertext": "BD4C",
+      "our_decryption_of_peer_ciphertext": "CD7C",
+      "peer_decryption_of_our_ciphertext": "CD7C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8CC5",
+      "key": "4556",
+      "our_ciphertext": "76F2",
+      "peer_ciphertext": "76F2",
+      "our_decryption_of_peer_ciphertext": "8CC5",
+      "peer_decryption_of_our_ciphertext": "8CC5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AFC1",
+      "key": "4B57",
+      "our_ciphertext": "D0F8",
+      "peer_ciphertext": "D0F8",
+      "our_decryption_of_peer_ciphertext": "AFC1",
+      "peer_decryption_of_our_ciphertext": "AFC1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "492D",
+      "key": "4C3A",
+      "our_ciphertext": "B794",
+      "peer_ciphertext": "B794",
+      "our_decryption_of_peer_ciphertext": "492D",
+      "peer_decryption_of_our_ciphertext": "492D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D5F8",
+      "key": "FDFA",
+      "our_ciphertext": "6153",
+      "peer_ciphertext": "6153",
+      "our_decryption_of_peer_ciphertext": "D5F8",
+      "peer_decryption_of_our_ciphertext": "D5F8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "45B8",
+      "key": "8736",
+      "our_ciphertext": "5CBD",
+      "peer_ciphertext": "5CBD",
+      "our_decryption_of_peer_ciphertext": "45B8",
+      "peer_decryption_of_our_ciphertext": "45B8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BEC7",
+      "key": "EF54",
+      "our_ciphertext": "191F",
+      "peer_ciphertext": "191F",
+      "our_decryption_of_peer_ciphertext": "BEC7",
+      "peer_decryption_of_our_ciphertext": "BEC7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8DE9",
+      "key": "78D0",
+      "our_ciphertext": "FBB0",
+      "peer_ciphertext": "FBB0",
+      "our_decryption_of_peer_ciphertext": "8DE9",
+      "peer_decryption_of_our_ciphertext": "8DE9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A0F8",
+      "key": "C13A",
+      "our_ciphertext": "4BF7",
+      "peer_ciphertext": "4BF7",
+      "our_decryption_of_peer_ciphertext": "A0F8",
+      "peer_decryption_of_our_ciphertext": "A0F8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C5AC",
+      "key": "C829",
+      "our_ciphertext": "5050",
+      "peer_ciphertext": "5050",
+      "our_decryption_of_peer_ciphertext": "C5AC",
+      "peer_decryption_of_our_ciphertext": "C5AC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9B76",
+      "key": "44B8",
+      "our_ciphertext": "0D5D",
+      "peer_ciphertext": "0D5D",
+      "our_decryption_of_peer_ciphertext": "9B76",
+      "peer_decryption_of_our_ciphertext": "9B76",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4C46",
+      "key": "0E09",
+      "our_ciphertext": "06ED",
+      "peer_ciphertext": "06ED",
+      "our_decryption_of_peer_ciphertext": "4C46",
+      "peer_decryption_of_our_ciphertext": "4C46",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7493",
+      "key": "B29A",
+      "our_ciphertext": "59BF",
+      "peer_ciphertext": "59BF",
+      "our_decryption_of_peer_ciphertext": "7493",
+      "peer_decryption_of_our_ciphertext": "7493",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DF42",
+      "key": "A49B",
+      "our_ciphertext": "0B46",
+      "peer_ciphertext": "0B46",
+      "our_decryption_of_peer_ciphertext": "DF42",
+      "peer_decryption_of_our_ciphertext": "DF42",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4C7F",
+      "key": "31AF",
+      "our_ciphertext": "3770",
+      "peer_ciphertext": "3770",
+      "our_decryption_of_peer_ciphertext": "4C7F",
+      "peer_decryption_of_our_ciphertext": "4C7F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F7F2",
+      "key": "F0B7",
+      "our_ciphertext": "B8EC",
+      "peer_ciphertext": "B8EC",
+      "our_decryption_of_peer_ciphertext": "F7F2",
+      "peer_decryption_of_our_ciphertext": "F7F2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9943",
+      "key": "2642",
+      "our_ciphertext": "8AF4",
+      "peer_ciphertext": "8AF4",
+      "our_decryption_of_peer_ciphertext": "9943",
+      "peer_decryption_of_our_ciphertext": "9943",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "768A",
+      "key": "2E88",
+      "our_ciphertext": "D8AD",
+      "peer_ciphertext": "D8AD",
+      "our_decryption_of_peer_ciphertext": "768A",
+      "peer_decryption_of_our_ciphertext": "768A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "781C",
+      "key": "D6C2",
+      "our_ciphertext": "2148",
+      "peer_ciphertext": "2148",
+      "our_decryption_of_peer_ciphertext": "781C",
+      "peer_decryption_of_our_ciphertext": "781C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "316D",
+      "key": "5071",
+      "our_ciphertext": "A1B9",
+      "peer_ciphertext": "A1B9",
+      "our_decryption_of_peer_ciphertext": "316D",
+      "peer_decryption_of_our_ciphertext": "316D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D357",
+      "key": "0718",
+      "our_ciphertext": "91AD",
+      "peer_ciphertext": "91AD",
+      "our_decryption_of_peer_ciphertext": "D357",
+      "peer_decryption_of_our_ciphertext": "D357",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3A1B",
+      "key": "2F01",
+      "our_ciphertext": "889F",
+      "peer_ciphertext": "889F",
+      "our_decryption_of_peer_ciphertext": "3A1B",
+      "peer_decryption_of_our_ciphertext": "3A1B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BFE5",
+      "key": "62DF",
+      "our_ciphertext": "44F6",
+      "peer_ciphertext": "44F6",
+      "our_decryption_of_peer_ciphertext": "BFE5",
+      "peer_decryption_of_our_ciphertext": "BFE5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "82D8",
+      "key": "1645",
+      "our_ciphertext": "14F7",
+      "peer_ciphertext": "14F7",
+      "our_decryption_of_peer_ciphertext": "82D8",
+      "peer_decryption_of_our_ciphertext": "82D8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A367",
+      "key": "0B71",
+      "our_ciphertext": "8DEA",
+      "peer_ciphertext": "8DEA",
+      "our_decryption_of_peer_ciphertext": "A367",
+      "peer_decryption_of_our_ciphertext": "A367",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CD94",
+      "key": "5D30",
+      "our_ciphertext": "A49E",
+      "peer_ciphertext": "A49E",
+      "our_decryption_of_peer_ciphertext": "CD94",
+      "peer_decryption_of_our_ciphertext": "CD94",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F9D7",
+      "key": "6C56",
+      "our_ciphertext": "3219",
+      "peer_ciphertext": "3219",
+      "our_decryption_of_peer_ciphertext": "F9D7",
+      "peer_decryption_of_our_ciphertext": "F9D7",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "00CD",
+      "key": "3B63",
+      "our_ciphertext": "00C3",
+      "peer_ciphertext": "00C3",
+      "our_decryption_of_peer_ciphertext": "00CD",
+      "peer_decryption_of_our_ciphertext": "00CD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6D00",
+      "key": "4066",
+      "our_ciphertext": "EAF3",
+      "peer_ciphertext": "EAF3",
+      "our_decryption_of_peer_ciphertext": "6D00",
+      "peer_decryption_of_our_ciphertext": "6D00",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "733B",
+      "key": "D788",
+      "our_ciphertext": "04BB",
+      "peer_ciphertext": "04BB",
+      "our_decryption_of_peer_ciphertext": "733B",
+      "peer_decryption_of_our_ciphertext": "733B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "305F",
+      "key": "F27F",
+      "our_ciphertext": "AE99",
+      "peer_ciphertext": "AE99",
+      "our_decryption_of_peer_ciphertext": "305F",
+      "peer_decryption_of_our_ciphertext": "305F",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "9287",
+      "key": "111C",
+      "our_ciphertext": "38CF",
+      "peer_ciphertext": "38CF",
+      "our_decryption_of_peer_ciphertext": "9287",
+      "peer_decryption_of_our_ciphertext": "9287",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "47BD",
+      "key": "AEC5",
+      "our_ciphertext": "0F0C",
+      "peer_ciphertext": "0F0C",
+      "our_decryption_of_peer_ciphertext": "47BD",
+      "peer_decryption_of_our_ciphertext": "47BD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E29A",
+      "key": "F448",
+      "our_ciphertext": "55D0",
+      "peer_ciphertext": "55D0",
+      "our_decryption_of_peer_ciphertext": "E29A",
+      "peer_decryption_of_our_ciphertext": "E29A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7FE4",
+      "key": "A719",
+      "our_ciphertext": "8CC4",
+      "peer_ciphertext": "8CC4",
+      "our_decryption_of_peer_ciphertext": "7FE4",
+      "peer_decryption_of_our_ciphertext": "7FE4",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6CDE",
+      "key": "04EB",
+      "our_ciphertext": "4656",
+      "peer_ciphertext": "4656",
+      "our_decryption_of_peer_ciphertext": "6CDE",
+      "peer_decryption_of_our_ciphertext": "6CDE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5F1C",
+      "key": "45BF",
+      "our_ciphertext": "BD39",
+      "peer_ciphertext": "BD39",
+      "our_decryption_of_peer_ciphertext": "5F1C",
+      "peer_decryption_of_our_ciphertext": "5F1C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C09C",
+      "key": "FB10",
+      "our_ciphertext": "3D45",
+      "peer_ciphertext": "3D45",
+      "our_decryption_of_peer_ciphertext": "C09C",
+      "peer_decryption_of_our_ciphertext": "C09C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8EF0",
+      "key": "1EC9",
+      "our_ciphertext": "F13A",
+      "peer_ciphertext": "F13A",
+      "our_decryption_of_peer_ciphertext": "8EF0",
+      "peer_decryption_of_our_ciphertext": "8EF0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7878",
+      "key": "A575",
+      "our_ciphertext": "8FC3",
+      "peer_ciphertext": "8FC3",
+      "our_decryption_of_peer_ciphertext": "7878",
+      "peer_decryption_of_our_ciphertext": "7878",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "88BC",
+      "key": "B492",
+      "our_ciphertext": "4700",
+      "peer_ciphertext": "4700",
+      "our_decryption_of_peer_ciphertext": "88BC",
+      "peer_decryption_of_our_ciphertext": "88BC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "E8B3",
+      "key": "D5DC",
+      "our_ciphertext": "11F9",
+      "peer_ciphertext": "11F9",
+      "our_decryption_of_peer_ciphertext": "E8B3",
+      "peer_decryption_of_our_ciphertext": "E8B3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "872B",
+      "key": "9E76",
+      "our_ciphertext": "D7F1",
+      "peer_ciphertext": "D7F1",
+      "our_decryption_of_peer_ciphertext": "872B",
+      "peer_decryption_of_our_ciphertext": "872B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2012",
+      "key": "32C2",
+      "our_ciphertext": "B3D1",
+      "peer_ciphertext": "B3D1",
+      "our_decryption_of_peer_ciphertext": "2012",
+      "peer_decryption_of_our_ciphertext": "2012",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EDC8",
+      "key": "AFE3",
+      "our_ciphertext": "70DC",
+      "peer_ciphertext": "70DC",
+      "our_decryption_of_peer_ciphertext": "EDC8",
+      "peer_decryption_of_our_ciphertext": "EDC8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B3F0",
+      "key": "6B6C",
+      "our_ciphertext": "4ACB",
+      "peer_ciphertext": "4ACB",
+      "our_decryption_of_peer_ciphertext": "B3F0",
+      "peer_decryption_of_our_ciphertext": "B3F0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "070A",
+      "key": "3592",
+      "our_ciphertext": "7467",
+      "peer_ciphertext": "7467",
+      "our_decryption_of_peer_ciphertext": "070A",
+      "peer_decryption_of_our_ciphertext": "070A",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5D60",
+      "key": "B392",
+      "our_ciphertext": "73E1",
+      "peer_ciphertext": "73E1",
+      "our_decryption_of_peer_ciphertext": "5D60",
+      "peer_decryption_of_our_ciphertext": "5D60",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "A45B",
+      "key": "4753",
+      "our_ciphertext": "E03B",
+      "peer_ciphertext": "E03B",
+      "our_decryption_of_peer_ciphertext": "A45B",
+      "peer_decryption_of_our_ciphertext": "A45B",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C3A8",
+      "key": "43DC",
+      "our_ciphertext": "24A1",
+      "peer_ciphertext": "24A1",
+      "our_decryption_of_peer_ciphertext": "C3A8",
+      "peer_decryption_of_our_ciphertext": "C3A8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8208",
+      "key": "DB06",
+      "our_ciphertext": "212A",
+      "peer_ciphertext": "212A",
+      "our_decryption_of_peer_ciphertext": "8208",
+      "peer_decryption_of_our_ciphertext": "8208",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5EA2",
+      "key": "22AD",
+      "our_ciphertext": "F948",
+      "peer_ciphertext": "F948",
+      "our_decryption_of_peer_ciphertext": "5EA2",
+      "peer_decryption_of_our_ciphertext": "5EA2",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "82BB",
+      "key": "68CD",
+      "our_ciphertext": "37F0",
+      "peer_ciphertext": "37F0",
+      "our_decryption_of_peer_ciphertext": "82BB",
+      "peer_decryption_of_our_ciphertext": "82BB",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0DB0",
+      "key": "AACA",
+      "our_ciphertext": "76FD",
+      "peer_ciphertext": "76FD",
+      "our_decryption_of_peer_ciphertext": "0DB0",
+      "peer_decryption_of_our_ciphertext": "0DB0",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "EC4D",
+      "key": "9D44",
+      "our_ciphertext": "6C03",
+      "peer_ciphertext": "6C03",
+      "our_decryption_of_peer_ciphertext": "EC4D",
+      "peer_decryption_of_our_ciphertext": "EC4D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "0467",
+      "key": "D6F6",
+      "our_ciphertext": "2A6A",
+      "peer_ciphertext": "2A6A",
+      "our_decryption_of_peer_ciphertext": "0467",
+      "peer_decryption_of_our_ciphertext": "0467",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "81FE",
+      "key": "D1D9",
+      "our_ciphertext": "8BC6",
+      "peer_ciphertext": "8BC6",
+      "our_decryption_of_peer_ciphertext": "81FE",
+      "peer_decryption_of_our_ciphertext": "81FE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "249C",
+      "key": "91D2",
+      "our_ciphertext": "2976",
+      "peer_ciphertext": "2976",
+      "our_decryption_of_peer_ciphertext": "249C",
+      "peer_decryption_of_our_ciphertext": "249C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "40FD",
+      "key": "A73F",
+      "our_ciphertext": "0F50",
+      "peer_ciphertext": "0F50",
+      "our_decryption_of_peer_ciphertext": "40FD",
+      "peer_decryption_of_our_ciphertext": "40FD",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "768C",
+      "key": "2709",
+      "our_ciphertext": "0E8C",
+      "peer_ciphertext": "0E8C",
+      "our_decryption_of_peer_ciphertext": "768C",
+      "peer_decryption_of_our_ciphertext": "768C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "B2AC",
+      "key": "B7AF",
+      "our_ciphertext": "4B4F",
+      "peer_ciphertext": "4B4F",
+      "our_decryption_of_peer_ciphertext": "B2AC",
+      "peer_decryption_of_our_ciphertext": "B2AC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "27F9",
+      "key": "D14A",
+      "our_ciphertext": "8228",
+      "peer_ciphertext": "8228",
+      "our_decryption_of_peer_ciphertext": "27F9",
+      "peer_decryption_of_our_ciphertext": "27F9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "7218",
+      "key": "6179",
+      "our_ciphertext": "2E81",
+      "peer_ciphertext": "2E81",
+      "our_decryption_of_peer_ciphertext": "7218",
+      "peer_decryption_of_our_ciphertext": "7218",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2275",
+      "key": "D75A",
+      "our_ciphertext": "445C",
+      "peer_ciphertext": "445C",
+      "our_decryption_of_peer_ciphertext": "2275",
+      "peer_decryption_of_our_ciphertext": "2275",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "3900",
+      "key": "8330",
+      "our_ciphertext": "A22E",
+      "peer_ciphertext": "A22E",
+      "our_decryption_of_peer_ciphertext": "3900",
+      "peer_decryption_of_our_ciphertext": "3900",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4434",
+      "key": "F0F6",
+      "our_ciphertext": "2C6B",
+      "peer_ciphertext": "2C6B",
+      "our_decryption_of_peer_ciphertext": "4434",
+      "peer_decryption_of_our_ciphertext": "4434",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "8F68",
+      "key": "57A1",
+      "our_ciphertext": "5DCC",
+      "peer_ciphertext": "5DCC",
+      "our_decryption_of_peer_ciphertext": "8F68",
+      "peer_decryption_of_our_ciphertext": "8F68",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FEBE",
+      "key": "3991",
+      "our_ciphertext": "079B",
+      "peer_ciphertext": "079B",
+      "our_decryption_of_peer_ciphertext": "FEBE",
+      "peer_decryption_of_our_ciphertext": "FEBE",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2879",
+      "key": "8507",
+      "our_ciphertext": "97ED",
+      "peer_ciphertext": "97ED",
+      "our_decryption_of_peer_ciphertext": "2879",
+      "peer_decryption_of_our_ciphertext": "2879",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "4DE3",
+      "key": "7F51",
+      "our_ciphertext": "03A1",
+      "peer_ciphertext": "03A1",
+      "our_decryption_of_peer_ciphertext": "4DE3",
+      "peer_decryption_of_our_ciphertext": "4DE3",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D234",
+      "key": "2283",
+      "our_ciphertext": "3C8E",
+      "peer_ciphertext": "3C8E",
+      "our_decryption_of_peer_ciphertext": "D234",
+      "peer_decryption_of_our_ciphertext": "D234",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "CB2D",
+      "key": "0583",
+      "our_ciphertext": "1782",
+      "peer_ciphertext": "1782",
+      "our_decryption_of_peer_ciphertext": "CB2D",
+      "peer_decryption_of_our_ciphertext": "CB2D",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2FA4",
+      "key": "4362",
+      "our_ciphertext": "1B5A",
+      "peer_ciphertext": "1B5A",
+      "our_decryption_of_peer_ciphertext": "2FA4",
+      "peer_decryption_of_our_ciphertext": "2FA4",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F6F1",
+      "key": "8DDE",
+      "our_ciphertext": "30DF",
+      "peer_ciphertext": "30DF",
+      "our_decryption_of_peer_ciphertext": "F6F1",
+      "peer_decryption_of_our_ciphertext": "F6F1",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1BF9",
+      "key": "C338",
+      "our_ciphertext": "F718",
+      "peer_ciphertext": "F718",
+      "our_decryption_of_peer_ciphertext": "1BF9",
+      "peer_decryption_of_our_ciphertext": "1BF9",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "5799",
+      "key": "2713",
+      "our_ciphertext": "6067",
+      "peer_ciphertext": "6067",
+      "our_decryption_of_peer_ciphertext": "5799",
+      "peer_decryption_of_our_ciphertext": "5799",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "DA95",
+      "key": "D98D",
+      "our_ciphertext": "04F5",
+      "peer_ciphertext": "04F5",
+      "our_decryption_of_peer_ciphertext": "DA95",
+      "peer_decryption_of_our_ciphertext": "DA95",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "1E08",
+      "key": "1F57",
+      "our_ciphertext": "DE76",
+      "peer_ciphertext": "DE76",
+      "our_decryption_of_peer_ciphertext": "1E08",
+      "peer_decryption_of_our_ciphertext": "1E08",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "BA1E",
+      "key": "11F8",
+      "our_ciphertext": "128E",
+      "peer_ciphertext": "128E",
+      "our_decryption_of_peer_ciphertext": "BA1E",
+      "peer_decryption_of_our_ciphertext": "BA1E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "99F5",
+      "key": "2232",
+      "our_ciphertext": "DC80",
+      "peer_ciphertext": "DC80",
+      "our_decryption_of_peer_ciphertext": "99F5",
+      "peer_decryption_of_our_ciphertext": "99F5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "F523",
+      "key": "6D2E",
+      "our_ciphertext": "F271",
+      "peer_ciphertext": "F271",
+      "our_decryption_of_peer_ciphertext": "F523",
+      "peer_decryption_of_our_ciphertext": "F523",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C8C8",
+      "key": "79DB",
+      "our_ciphertext": "20A6",
+      "peer_ciphertext": "20A6",
+      "our_decryption_of_peer_ciphertext": "C8C8",
+      "peer_decryption_of_our_ciphertext": "C8C8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "D94E",
+      "key": "9002",
+      "our_ciphertext": "0CFC",
+      "peer_ciphertext": "0CFC",
+      "our_decryption_of_peer_ciphertext": "D94E",
+      "peer_decryption_of_our_ciphertext": "D94E",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "2CFC",
+      "key": "C9B2",
+      "our_ciphertext": "DD2F",
+      "peer_ciphertext": "DD2F",
+      "our_decryption_of_peer_ciphertext": "2CFC",
+      "peer_decryption_of_our_ciphertext": "2CFC",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "AEF8",
+      "key": "CD33",
+      "our_ciphertext": "E914",
+      "peer_ciphertext": "E914",
+      "our_decryption_of_peer_ciphertext": "AEF8",
+      "peer_decryption_of_our_ciphertext": "AEF8",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "C311",
+      "key": "70C3",
+      "our_ciphertext": "2845",
+      "peer_ciphertext": "2845",
+      "our_decryption_of_peer_ciphertext": "C311",
+      "peer_decryption_of_our_ciphertext": "C311",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "FDE5",
+      "key": "60BB",
+      "our_ciphertext": "01EE",
+      "peer_ciphertext": "01EE",
+      "our_decryption_of_peer_ciphertext": "FDE5",
+      "peer_decryption_of_our_ciphertext": "FDE5",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "61DA",
+      "key": "CCCC",
+      "our_ciphertext": "89D7",
+      "peer_ciphertext": "89D7",
+      "our_decryption_of_peer_ciphertext": "61DA",
+      "peer_decryption_of_our_ciphertext": "61DA",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "804C",
+      "key": "7588",
+      "our_ciphertext": "E0A8",
+      "peer_ciphertext": "E0A8",
+      "our_decryption_of_peer_ciphertext": "804C",
+      "peer_decryption_of_our_ciphertext": "804C",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "6F72",
+      "key": "652C",
+      "our_ciphertext": "03EF",
+      "peer_ciphertext": "03EF",
+      "our_decryption_of_peer_ciphertext": "6F72",
+      "peer_decryption_of_our_ciphertext": "6F72",
+      "passed": true
+    },
+    {
+      "category": "random",
+      "plaintext": "97BA",
+      "key": "9413",
+      "our_ciphertext": "15D9",
+      "peer_ciphertext": "15D9",
+      "our_decryption_of_peer_ciphertext": "97BA",
+      "peer_decryption_of_our_ciphertext": "97BA",
+      "passed": true
+    }
+  ]
+}
