@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-26",
+  "browser": "Codex in-app browser",
+  "flows": [
+    {
+      "name": "basic binary encrypt",
+      "actual": "24EC",
+      "passed": true
+    },
+    {
+      "name": "basic decrypt",
+      "actual": "D728",
+      "passed": true
+    },
+    {
+      "name": "cross vectors",
+      "actual": "6/6",
+      "passed": true
+    },
+    {
+      "name": "ASCII escaped roundtrip",
+      "actual": "Hello S-AES!",
+      "passed": true
+    },
+    {
+      "name": "CR ciphertext escaped roundtrip",
+      "actualHex": "206F",
+      "passed": true
+    },
+    {
+      "name": "double EE",
+      "actual": "3476",
+      "passed": true
+    },
+    {
+      "name": "MITM full keyspace",
+      "key": "F123FE98",
+      "candidates": 1,
+      "searchedPerSide": 65536,
+      "passed": true
+    },
+    {
+      "name": "triple48 encrypt/decrypt",
+      "cipher": "8913",
+      "restored": "D728",
+      "passed": true
+    },
+    {
+      "name": "CBC encrypt/decrypt",
+      "cipher": "75A3EB0B27DE693206D6",
+      "restored": "ABCDEFGH",
+      "passed": true
+    },
+    {
+      "name": "CBC XOR tamper",
+      "first": "3147",
+      "second": "4345",
+      "laterUnchanged": true,
+      "passed": true
+    },
+    {
+      "name": "CBC replacement",
+      "cipher": "0000EB0B27DE693206D6",
+      "passed": true
+    },
+    {
+      "name": "JSON download",
+      "experiment": "tamper",
+      "contentVerified": true,
+      "passed": true
+    },
+    {
+      "name": "invalid input clears old auxiliary outputs",
+      "passed": true
+    },
+    {
+      "name": "binary to hex auto conversion",
+      "plaintext": "D728",
+      "key": "4AF5",
+      "passed": true
+    },
+    {
+      "name": "trace step matrix",
+      "step": "列混淆",
+      "value": "F633",
+      "passed": true
+    },
+    {
+      "name": "keyboard tab navigation",
+      "selected": "02交叉测试",
+      "passed": true
+    }
+  ],
+  "layout": [
+    {
+      "width": 1280,
+      "rootScrollWidth": 1280
+    },
+    {
+      "width": 375,
+      "rootScrollWidth": 375
+    }
+  ],
+  "unlabelledControls": [],
+  "consoleWarningsOrErrors": []
+}

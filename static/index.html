@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f2f6fb"><title>S-AES 加密实验室 · 信息安全导论</title>
+  <link rel="icon" href="data:,"><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#workspace">跳到实验区域</a>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="S-AES 实验室首页"><span class="brand-mark" aria-hidden="true"><i>S</i><i>A</i><i>E</i><i>S</i></span><span>S-AES<small>密码学实验室</small></span></a>
+  <p class="nav-title">实验关卡</p>
+  <nav role="tablist" aria-label="实验关卡" aria-orientation="vertical">
+    <button role="tab" id="tab-basic" aria-controls="panel-basic" aria-selected="true" data-panel="basic"><span>01</span>基本加解密</button>
+    <button role="tab" id="tab-cross" aria-controls="panel-cross" aria-selected="false" tabindex="-1" data-panel="cross"><span>02</span>交叉测试</button>
+    <button role="tab" id="tab-text" aria-controls="panel-text" aria-selected="false" tabindex="-1" data-panel="text"><span>03</span>字符串加密</button>
+    <button role="tab" id="tab-multiple" aria-controls="panel-multiple" aria-selected="false" tabindex="-1" data-panel="multiple"><span>04</span>多重加密与攻击</button>
+    <button role="tab" id="tab-cbc" aria-controls="panel-cbc" aria-selected="false" tabindex="-1" data-panel="cbc"><span>05</span>CBC 工作模式</button>
+  </nav>
+  <div class="sidebar-note"><strong>信息安全导论 / 实验 2</strong><p>依据《密码编码学与网络安全》第八版，附录 D 简化 AES。</p><span>16-bit 分组 · 16-bit 密钥</span></div>
+  <div class="local"><span aria-hidden="true"></span>本机计算，无需联网</div>
+</aside>
+<main id="workspace" tabindex="-1">
+  <header class="topline"><span>重庆大学 · 大数据与软件学院</span><span>简化 AES / 两轮变换</span></header>
+  <section id="panel-basic" role="tabpanel" aria-labelledby="tab-basic">
+    <div class="heading"><p class="eyebrow">关卡 01 / 基本测试</p><h1>S-AES 加密实验室</h1><p>输入一个分组，查看从明文到密文的每一步变化。</p></div>
+    <div class="split">
+      <article class="sheet"><div class="section-title"><h2>分组加解密</h2><button type="button" class="text-button" id="basic-example">载入算例</button></div>
+        <form id="basic-form"><label for="basic-format">输入格式</label><select id="basic-format" name="basic-format" autocomplete="off"><option value="bin">二进制 · 16 bits</option><option value="hex">十六进制 · 4 位</option></select>
+          <label for="basic-data">输入分组</label><input id="basic-data" name="basic-data" autocomplete="off" class="mono" value="1101011100101000" spellcheck="false" required aria-describedby="basic-hint"><p class="hint" id="basic-hint">支持空格分隔；分组和密钥使用相同格式。</p>
+          <label for="basic-key">密钥 K</label><input id="basic-key" name="basic-key" autocomplete="off" class="mono" value="0100101011110101" spellcheck="false" required>
+          <div class="actions"><button type="submit" name="action" value="encrypt" class="primary">加密分组</button><button type="submit" name="action" value="decrypt">解密分组</button></div>
+        </form>
+        <div id="basic-result" class="result" aria-live="polite"><p class="hint">标准算例：D728 + 密钥 4AF5，密文应为 24EC。</p></div>
+      </article>
+      <article class="sheet state-sheet"><div class="section-title"><h2>状态矩阵</h2><span class="muted">按列排列</span></div><div id="state-matrix" class="matrix" aria-label="状态矩阵"><span>D</span><span>2</span><span>7</span><span>8</span></div><p class="matrix-caption" id="matrix-caption">输入 D728 · 第一字节占据第一列</p><div class="key-list" id="round-keys"><p>扩展后的轮密钥将在运行后显示。</p></div><p class="hint">第一轮包含列混淆，第二轮省略列混淆。点击下方的变换步骤查看中间状态。</p></article>
+    </div>
+    <article class="sheet trace-sheet"><div class="section-title"><h2>轮变换过程</h2><span class="muted">每步显示 16-bit 状态</span></div><div id="trace" class="trace"><p class="hint">点击「加密分组」或「解密分组」开始。</p></div></article>
+  </section>
+  <section id="panel-cross" role="tabpanel" aria-labelledby="tab-cross" hidden>
+    <div class="heading"><p class="eyebrow">关卡 02 / 交叉测试</p><h1>让不同实现得到同一结果</h1><p>交换相同格式的测试向量，核对双方的加密与解密结果。</p></div>
+    <article class="sheet"><div class="section-title"><h2>标准测试向量</h2><a class="button" href="/vectors.json" download="saes-vectors.json">下载交换向量</a></div><p class="hint">每项包含 plaintext、key、ciphertext，均为 4 位十六进制。可粘贴其他组提供的 JSON 数组，最多 100 项。</p><form id="cross-form"><label for="cross-vectors">测试向量 JSON</label><textarea id="cross-vectors" name="cross-vectors" autocomplete="off" class="mono" rows="10" spellcheck="false" required></textarea><div class="actions"><button class="primary" type="submit">执行交叉验证</button><button id="cross-example" type="button">载入内置向量</button></div></form><div id="cross-result" class="result" aria-live="polite"></div></article>
+    <p class="note">内置向量经过独立矩阵实现对照。实际组间测试需与其他小组交换数据并记录小组名称、时间和结果，不能用内置测试替代。</p>
+  </section>
+  <section id="panel-text" role="tabpanel" aria-labelledby="tab-text" hidden>
+    <div class="heading"><p class="eyebrow">关卡 03 / 扩展功能</p><h1>以两个字节为一组</h1><p>处理 ASCII 字符串，保留每个字节，包括空格和末尾的零字节。</p></div>
+    <div class="split"><article class="sheet"><h2>字符串加解密</h2><form id="text-form"><label for="text-key">密钥 K · 4 位十六进制</label><input id="text-key" name="text-key" autocomplete="off" class="mono" value="2D55" required><label for="text-data">ASCII 明文 / 密文</label><textarea id="text-data" name="text-data" autocomplete="off" rows="5" spellcheck="false">Hello S-AES!</textarea><label for="text-representation">解密时的密文格式</label><select id="text-representation" name="text-representation" autocomplete="off"><option value="hex">十六进制（推荐）</option><option value="escaped">字节字符的 JSON 转义表示</option></select><div class="actions"><button type="submit" class="primary" name="action" value="encrypt">加密字符串</button><button type="submit" name="action" value="decrypt">解密字符串</button></div></form><div id="text-result" class="result" aria-live="polite"></div><button id="text-use" type="button" hidden>将密文填入输入框</button></article><article class="sheet explanation"><h2>字节约定</h2><p>每 2 个 ASCII 字符组成一个 16-bit 分组，前一个字节为高位。</p><div class="byte-example"><span>A<small>41</small></span><span>B<small>42</small></span><b>4142</b></div><h3>可逆填充</h3><p>采用 2 字节分组的 PKCS#7：奇数长度补 01，偶数长度补 02 02。空字符串也补一个完整分组。</p><h3>如何表示乱码密文</h3><p>任意密文字节可能超出 ASCII。界面同时输出十六进制和可逆的字节字符转义表示，下载 JSON 可保留原始 Latin-1 字符。</p></article></div>
+  </section>
+  <section id="panel-multiple" role="tabpanel" aria-labelledby="tab-multiple" hidden>
+    <div class="heading"><p class="eyebrow">关卡 04 / 多重加密</p><h1>多重加密与中间相遇攻击</h1><p>比较组合密钥的加密过程，并遍历完整的密钥空间。</p></div>
+    <div class="split"><article class="sheet"><h2>双重 / 三重加解密</h2><form id="multiple-form"><label for="multiple-mode">加密模式</label><select id="multiple-mode" name="multiple-mode" autocomplete="off"><option value="double">双重 EE · 32-bit 密钥</option><option value="triple32">三重 EDE · 32-bit 密钥</option><option value="triple48">三重 EDE · 48-bit 密钥</option></select><label for="multiple-format">输入格式</label><select id="multiple-format" name="multiple-format" autocomplete="off"><option value="hex">十六进制</option><option value="bin">二进制</option></select><label for="multiple-data">16-bit 分组</label><input id="multiple-data" name="multiple-data" autocomplete="off" class="mono" value="D728" required><label for="multiple-key">组合密钥 K₁ || K₂ [|| K₃]</label><input id="multiple-key" name="multiple-key" autocomplete="off" class="mono" value="F123FE98" required><p class="hint" id="multiple-formula">C = E(K₂, E(K₁, P))</p><div class="actions"><button class="primary" type="submit" name="action" value="encrypt">多重加密</button><button type="submit" name="action" value="decrypt">多重解密</button></div></form><div id="multiple-result" class="result" aria-live="polite"></div></article>
+      <article class="sheet"><div class="section-title"><h2>中间相遇攻击</h2><span class="muted">2 × 65,536</span></div><p class="hint">仅攻击双重 EE 加密。每行一组十六进制明密文，以空格分隔。建议使用 3 组不同明文。</p><form id="mitm-form"><label for="mitm-pairs">已知明密文对 P C</label><textarea id="mitm-pairs" name="mitm-pairs" autocomplete="off" class="mono" rows="5" spellcheck="false" required></textarea><div class="actions"><button class="primary" type="submit">搜索完整密钥空间</button><button type="button" id="mitm-demo">生成演示数据</button></div></form><p class="hint">演示数据使用左侧 32-bit 密钥。攻击仅使用明密文对，不会接收该密钥。</p><div id="mitm-result" class="result" aria-live="polite"></div></article></div>
+  </section>
+  <section id="panel-cbc" role="tabpanel" aria-labelledby="tab-cbc" hidden>
+    <div class="heading"><p class="eyebrow">关卡 05 / 工作模式</p><h1>CBC 链式加密与篡改实验</h1><p>共享 16-bit 初始向量，观察一个密文分组的修改如何传播。</p></div>
+    <div class="split"><article class="sheet"><div class="section-title"><h2>CBC 消息加解密</h2><button class="text-button" type="button" id="cbc-random">生成随机 IV</button></div><form id="cbc-form"><div class="field-pair"><div><label for="cbc-key">密钥 K · HEX</label><input id="cbc-key" name="cbc-key" autocomplete="off" class="mono" value="2D55" required></div><div><label for="cbc-iv">IV · HEX</label><input id="cbc-iv" name="cbc-iv" autocomplete="off" class="mono" value="1234" placeholder="留空自动生成"></div></div><label for="cbc-data">ASCII 明文 / 十六进制密文</label><textarea id="cbc-data" name="cbc-data" autocomplete="off" rows="5" spellcheck="false">ABCDEFGH</textarea><div class="actions"><button class="primary" type="submit" name="action" value="encrypt">CBC 加密</button><button type="submit" name="action" value="decrypt">CBC 解密</button></div></form><div id="cbc-result" class="result" aria-live="polite"></div><button id="cbc-use" type="button" hidden>将密文填入输入框并用于篡改</button></article>
+      <article class="sheet"><h2>修改 / 替换密文分组</h2><form id="tamper-form"><label for="tamper-data">原始 CBC 密文 · HEX</label><textarea id="tamper-data" name="tamper-data" autocomplete="off" class="mono" rows="3" spellcheck="false" required></textarea><div class="field-pair"><div><label for="tamper-index">分组下标（从 0 开始）</label><input id="tamper-index" name="tamper-index" autocomplete="off" type="number" min="0" step="1" value="0" required></div><div><label for="tamper-operation">篡改方式</label><select id="tamper-operation" name="tamper-operation" autocomplete="off"><option value="xor">异或位翻转</option><option value="replace">替换整个分组</option></select></div></div><label for="tamper-change">异或掩码 / 替换值 · 4 位 HEX</label><input id="tamper-change" name="tamper-change" autocomplete="off" class="mono" value="0001" required><p class="hint">使用左侧的密钥与 IV。先运行 CBC 加密，密文会自动填入这里。</p><div class="actions"><button class="primary" type="submit">篡改并比较解密结果</button></div></form><div id="tamper-status" class="result" aria-live="polite"></div></article></div>
+    <article class="sheet trace-sheet"><h2>逐分组对比</h2><p class="hint">比较时保留填充字节，即使末尾被破坏也能观察结果。</p><div id="tamper-result"><p class="hint">执行篡改实验后，在这里查看变化。</p></div></article>
+    <p class="note">CBC 本身不提供完整性认证。链式错误传播不能可靠检测篡改，填充有效也不代表消息完整；实际系统还需要消息认证或认证加密。</p>
+  </section>
+  <footer><span>S-AES 教学实现 · 不用于实际安全保护</span><button id="download-result" type="button" disabled>下载本次结果 JSON</button></footer>
+</main>
+</body>
+</html>

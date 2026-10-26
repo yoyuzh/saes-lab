@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-10-26T03:33:03.305030-07:00",
+  "python": "3.14.7",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "tests": 24,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 1.6139,
+  "basic": {
+    "hex": "24EC",
+    "binary": "0010010011101100",
+    "trace": [
+      {
+        "step": "输入",
+        "value": "D728",
+        "binary": "1101011100101000",
+        "matrix": [
+          [
+            "D",
+            "2"
+          ],
+          [
+            "7",
+            "8"
+          ]
+        ]
+      },
+      {
+        "step": "轮密钥加 K₀",
+        "value": "9DDD",
+        "binary": "1001110111011101",
+        "matrix": [
+          [
+            "9",
+            "D"
+          ],
+          [
+            "D",
+            "D"
+          ]
+        ]
+      },
+      {
+        "step": "半字节替代",
+        "value": "2EEE",
+        "binary": "0010111011101110",
+        "matrix": [
+          [
+            "2",
+            "E"
+          ],
+          [
+            "E",
+            "E"
+          ]
+        ]
+      },
+      {
+        "step": "行移位",
+        "value": "2EEE",
+        "binary": "0010111011101110",
+        "matrix": [
+          [
+            "2",
+            "E"
+          ],
+          [
+            "E",
+            "E"
+          ]
+        ]
+      },
+      {
+        "step": "列混淆",
+        "value": "F633",
+        "binary": "1111011000110011",
+        "matrix": [
+          [
+            "F",
+            "3"
+          ],
+          [
+            "6",
+            "3"
+          ]
+        ]
+      },
+      {
+        "step": "轮密钥加 K₁",
+        "value": "2B1B",
+        "binary": "0010101100011011",
+        "matrix": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "B",
+            "B"
+          ]
+        ]
+      },
+      {
+        "step": "半字节替代",
+        "value": "A343",
+        "binary": "1010001101000011",
+        "matrix": [
+          [
+            "A",
+            "4"
+          ],
+          [
+            "3",
+            "3"
+          ]
+        ]
+      },
+      {
+        "step": "行移位",
+        "value": "A343",
+        "binary": "1010001101000011",
+        "matrix": [
+          [
+            "A",
+            "4"
+          ],
+          [
+            "3",
+            "3"
+          ]
+        ]
+      },
+      {
+        "step": "轮密钥加 K₂",
+        "value": "24EC",
+        "binary": "0010010011101100",
+        "matrix": [
+          [
+            "2",
+            "E"
+          ],
+          [
+            "4",
+            "C"
+          ]
+        ]
+      }
+    ],
+    "round_keys": [
+      "4AF5",
+      "DD28",
+      "87AF"
+    ]
+  },
+  "cross": {
+    "rows": [
+      {
+        "plaintext": "D728",
+        "key": "4AF5",
+        "expected": "24EC",
+        "actual": "24EC",
+        "restored": "D728",
+        "passed": true
+      },
+      {
+        "plaintext": "A749",
+        "key": "2D55",
+        "expected": "C349",
+        "actual": "C349",
+        "restored": "A749",
+        "passed": true
+      },
+      {
+        "plaintext": "0000",
+        "key": "0000",
+        "expected": "071E",
+        "actual": "071E",
+        "restored": "0000",
+        "passed": true
+      },
+      {
+        "plaintext": "FFFF",
+        "key": "FFFF",
+        "expected": "5343",
+        "actual": "5343",
+        "restored": "FFFF",
+        "passed": true
+      },
+      {
+        "plaintext": "4142",
+        "key": "2D55",
+        "expected": "7B3D",
+        "actual": "7B3D",
+        "restored": "4142",
+        "passed": true
+      },
+      {
+        "plaintext": "1234",
+        "key": "ABCD",
+        "expected": "AB86",
+        "actual": "AB86",
+        "restored": "1234",
+        "passed": true
+      }
+    ],
+    "passed": 6,
+    "total": 6
+  },
+  "text": {
+    "encrypted": {
+      "hex": "E90156CD0E56B7E4EB31D7E223DF",
+      "latin1": "é\u0001VÍ\u000eV·äë1×â#ß",
+      "escaped": "\"\\u00e9\\u0001V\\u00cd\\u000eV\\u00b7\\u00e4\\u00eb1\\u00d7\\u00e2#\\u00df\"",
+      "blocks": [
+        "E901",
+        "56CD",
+        "0E56",
+        "B7E4",
+        "EB31",
+        "D7E2",
+        "23DF"
+      ],
+      "byte_length": 14
+    },
+    "restored": "Hello S-AES!"
+  },
+  "multiple": {
+    "double": {
+      "key": "F123FE98",
+      "plaintext": "D728",
+      "ciphertext": "3476",
+      "restored": "D728"
+    },
+    "triple32": {
+      "key": "F123FE98",
+      "plaintext": "D728",
+      "ciphertext": "418A",
+      "restored": "D728"
+    },
+    "triple48": {
+      "key": "F123FE985678",
+      "plaintext": "D728",
+      "ciphertext": "8913",
+      "restored": "D728"
+    }
+  },
+  "mitm": {
+    "known_pairs": [
+      {
+        "plaintext": "D728",
+        "ciphertext": "3476"
+      },
+      {
+        "plaintext": "1234",
+        "ciphertext": "BC23"
+      },
+      {
+        "plaintext": "FFFF",
+        "ciphertext": "5EA4"
+      }
+    ],
+    "one_pair_candidates": 65568,
+    "searched_per_side": 65536,
+    "first_pair_matches": 65568,
+    "three_pair_candidates": 1,
+    "recovered_keys": [
+      "F123FE98"
+    ],
+    "elapsed_seconds": 0.2373
+  },
+  "cbc": {
+    "plaintext": "ABCDEFGH",
+    "key": "2D55",
+    "iv": "1234",
+    "ciphertext": "75A3EB0B27DE693206D6",
+    "bit_flip": {
+      "original_cipher": "75A3EB0B27DE693206D6",
+      "modified_cipher": "75A2EB0B27DE693206D6",
+      "blocks": [
+        {
+          "index": 0,
+          "before": "4142",
+          "after": "3147",
+          "before_text": "\"AB\"",
+          "after_text": "\"1G\"",
+          "xor": "7005",
+          "changed": true
+        },
+        {
+          "index": 1,
+          "before": "4344",
+          "after": "4345",
+          "before_text": "\"CD\"",
+          "after_text": "\"CE\"",
+          "xor": "0001",
+          "changed": true
+        },
+        {
+          "index": 2,
+          "before": "4546",
+          "after": "4546",
+          "before_text": "\"EF\"",
+          "after_text": "\"EF\"",
+          "xor": "0000",
+          "changed": false
+        },
+        {
+          "index": 3,
+          "before": "4748",
+          "after": "4748",
+          "before_text": "\"GH\"",
+          "after_text": "\"GH\"",
+          "xor": "0000",
+          "changed": false
+        },
+        {
+          "index": 4,
+          "before": "0202",
+          "after": "0202",
+          "before_text": "\"\\u0002\\u0002\"",
+          "after_text": "\"\\u0002\\u0002\"",
+          "xor": "0000",
+          "changed": false
+        }
+      ],
+      "padding_valid": true,
+      "original_plain": "\"ABCDEFGH\\u0002\\u0002\"",
+      "modified_plain": "\"1GCEEFGH\\u0002\\u0002\""
+    },
+    "replacement": {
+      "original_cipher": "75A3EB0B27DE693206D6",
+      "modified_cipher": "0000EB0B27DE693206D6",
+      "blocks": [
+        {
+          "index": 0,
+          "before": "4142",
+          "after": "A349",
+          "before_text": "\"AB\"",
+          "after_text": "\"\\u00a3I\"",
+          "xor": "E20B",
+          "changed": true
+        },
+        {
+          "index": 1,
+          "before": "4344",
+          "after": "36E7",
+          "before_text": "\"CD\"",
+          "after_text": "\"6\\u00e7\"",
+          "xor": "75A3",
+          "changed": true
+        },
+        {
+          "index": 2,
+          "before": "4546",
+          "after": "4546",
+          "before_text": "\"EF\"",
+          "after_text": "\"EF\"",
+          "xor": "0000",
+          "changed": false
+        },
+        {
+          "index": 3,
+          "before": "4748",
+          "after": "4748",
+          "before_text": "\"GH\"",
+          "after_text": "\"GH\"",
+          "xor": "0000",
+          "changed": false
+        },
+        {
+          "index": 4,
+          "before": "0202",
+          "after": "0202",
+          "before_text": "\"\\u0002\\u0002\"",
+          "after_text": "\"\\u0002\\u0002\"",
+          "xor": "0000",
+          "changed": false
+        }
+      ],
+      "padding_valid": true,
+      "original_plain": "\"ABCDEFGH\\u0002\\u0002\"",
+      "modified_plain": "\"\\u00a3I6\\u00e7EFGH\\u0002\\u0002\""
+    }
+  },
+  "limits": {
+    "inter_group_testing": "Awaiting an independent student group; no group result claimed.",
+    "remote_submission": "Not published or submitted by this script."
+  }
+}

@@ -1,0 +1,20 @@
+ruff check saes.py app.py verify.py tests --select E9,F63,F7,F82,F401
+All checks passed!
+
+coverage run --source=saes,app -m unittest discover
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 2.876s
+
+OK
+
+coverage report -m
+Name      Stmts   Miss  Cover   Missing
+---------------------------------------
+app.py      247     29    88%   73, 96, 131-132, 138, 161, 178-179, 207-208, 266-268, 290-305, 309
+saes.py     140      4    97%   26, 38, 157, 177
+---------------------------------------
+TOTAL       387     33    91%
+
+coverage json -o artifacts/coverage.json
+Wrote JSON report to artifacts/coverage.json

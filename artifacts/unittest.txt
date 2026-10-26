@@ -1,0 +1,29 @@
+test_bad_json_size_origin_and_paths (tests.test_app.HTTPTests.test_bad_json_size_origin_and_paths) ... ok
+test_real_http_assets_and_encrypt (tests.test_app.HTTPTests.test_real_http_assets_and_encrypt) ... ok
+test_binary_block_and_trace (tests.test_app.ServiceTests.test_binary_block_and_trace) ... ok
+test_byte_characters_preserve_carriage_return (tests.test_app.ServiceTests.test_byte_characters_preserve_carriage_return) ... ok
+test_cbc_random_iv_and_tamper (tests.test_app.ServiceTests.test_cbc_random_iv_and_tamper) ... ok
+test_exchange_vectors_detect_mismatch (tests.test_app.ServiceTests.test_exchange_vectors_detect_mismatch) ... ok
+test_maximum_messages_remain_decryptable (tests.test_app.ServiceTests.test_maximum_messages_remain_decryptable) ... ok
+test_multiple_modes_and_demo (tests.test_app.ServiceTests.test_multiple_modes_and_demo) ... ok
+test_reject_invalid_cipher_representations (tests.test_app.ServiceTests.test_reject_invalid_cipher_representations) ... ok
+test_rejects_malformed_requests (tests.test_app.ServiceTests.test_rejects_malformed_requests) ... ok
+test_text_and_latin1_cipher (tests.test_app.ServiceTests.test_text_and_latin1_cipher) ... ok
+test_appendix_key_expansion (tests.test_cipher.AppendixTests.test_appendix_key_expansion) ... ok
+test_appendix_transform_examples (tests.test_cipher.AppendixTests.test_appendix_transform_examples) ... ok
+test_canonical_known_answer (tests.test_cipher.AppendixTests.test_canonical_known_answer) ... ok
+test_entire_plaintext_space (tests.test_cipher.AppendixTests.test_entire_plaintext_space) ... ok
+test_inverse_transforms (tests.test_cipher.AppendixTests.test_inverse_transforms) ... ok
+test_reference_cross_check (tests.test_cipher.AppendixTests.test_reference_cross_check) ... ok
+test_strict_validation (tests.test_cipher.AppendixTests.test_strict_validation) ... ok
+test_trace_has_real_round_states (tests.test_cipher.AppendixTests.test_trace_has_real_round_states) ... ok
+test_ascii_roundtrip_and_padding (tests.test_cipher.ExtensionTests.test_ascii_roundtrip_and_padding) ... ok
+test_cbc_known_composition_and_iv (tests.test_cipher.ExtensionTests.test_cbc_known_composition_and_iv) ... ok
+test_cbc_tamper_propagation (tests.test_cipher.ExtensionTests.test_cbc_tamper_propagation) ... ok
+test_double_and_both_triple_variants (tests.test_cipher.ExtensionTests.test_double_and_both_triple_variants) ... ok
+test_full_keyspace_mitm_recovers_and_keeps_collisions (tests.test_cipher.ExtensionTests.test_full_keyspace_mitm_recovers_and_keeps_collisions) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.219s
+
+OK

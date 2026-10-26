@@ -1,0 +1,32 @@
+[
+  {
+    "plaintext": "D728",
+    "key": "4AF5",
+    "ciphertext": "24EC"
+  },
+  {
+    "plaintext": "A749",
+    "key": "2D55",
+    "ciphertext": "C349"
+  },
+  {
+    "plaintext": "0000",
+    "key": "0000",
+    "ciphertext": "071E"
+  },
+  {
+    "plaintext": "FFFF",
+    "key": "FFFF",
+    "ciphertext": "5343"
+  },
+  {
+    "plaintext": "4142",
+    "key": "2D55",
+    "ciphertext": "7B3D"
+  },
+  {
+    "plaintext": "1234",
+    "key": "ABCD",
+    "ciphertext": "AB86"
+  }
+]
